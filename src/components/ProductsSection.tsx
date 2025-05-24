@@ -110,7 +110,7 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
           {filteredProducts.map((product, index) => (
             <Card 
               key={product.id} 
-              className="group hover:shadow-xl transition-all duration-300 border-beauty-light hover:border-beauty-medium overflow-hidden"
+              className="group hover:shadow-xl transition-all duration-300 border-beauty-light hover:border-beauty-medium overflow-hidden flex flex-col h-full"
               style={{
                 animationDelay: `${index * 100}ms`
               }}
@@ -128,7 +128,7 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
                 </div>
               </div>
               
-              <CardHeader>
+              <CardHeader className="flex-grow">
                 <CardTitle className="text-beauty-dark group-hover:text-beauty-medium transition-colors">
                   {product.name}
                 </CardTitle>
@@ -137,7 +137,7 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
                 </CardDescription>
               </CardHeader>
               
-              <CardContent>
+              <CardContent className="pb-4">
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-beauty-dark">
                     R$ {product.price.toFixed(2)}
@@ -145,7 +145,7 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
                 </div>
               </CardContent>
               
-              <CardFooter>
+              <CardFooter className="mt-auto pt-0">
                 <Button 
                   onClick={() => onAddToCart(product)}
                   className="w-full bg-beauty-medium hover:bg-beauty-dark text-white"
