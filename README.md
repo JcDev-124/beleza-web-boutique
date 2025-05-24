@@ -1,73 +1,128 @@
-# Welcome to your Lovable project
 
-## Project info
+# Belle Institute - Instituto de Beleza Premium
 
-**URL**: https://lovable.dev/projects/737018b5-3773-4919-af9e-2257caebb146
+Um site moderno e elegante para instituto de beleza, desenvolvido com React, TypeScript e Tailwind CSS.
 
-## How can I edit this code?
+## 🚀 Como rodar o projeto localmente
 
-There are several ways of editing your application.
+### Pré-requisitos
 
-**Use Lovable**
+Antes de começar, certifique-se de ter instalado em sua máquina:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/737018b5-3773-4919-af9e-2257caebb146) and start prompting.
+- **Node.js** (versão 18 ou superior) - [Download aqui](https://nodejs.org/)
+- **Git** - [Download aqui](https://git-scm.com/)
+- **npm** (vem junto com o Node.js) ou **yarn**
 
-Changes made via Lovable will be committed automatically to this repo.
+### Passo a passo
 
-**Use your preferred IDE**
+1. **Clone o repositório**
+   ```bash
+   git clone <URL_DO_SEU_REPOSITORIO_GITHUB>
+   cd <NOME_DO_PROJETO>
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. **Instale as dependências**
+   ```bash
+   npm install
+   ```
+   ou se preferir usar yarn:
+   ```bash
+   yarn install
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3. **Inicie o servidor de desenvolvimento**
+   ```bash
+   npm run dev
+   ```
+   ou com yarn:
+   ```bash
+   yarn dev
+   ```
 
-Follow these steps:
+4. **Acesse o projeto**
+   - Abra seu navegador e vá para: `http://localhost:8080`
+   - O projeto será recarregado automaticamente quando você fizer alterações no código
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Scripts disponíveis
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Gera a versão de produção
+- `npm run preview` - Visualiza a versão de produção localmente
+- `npm run lint` - Executa o linter para verificar problemas no código
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🛠️ Tecnologias utilizadas
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+- **React 18** - Biblioteca para interfaces de usuário
+- **TypeScript** - Superset do JavaScript com tipagem estática
+- **Vite** - Ferramenta de build rápida e moderna
+- **Tailwind CSS** - Framework CSS utilitário
+- **Shadcn/UI** - Componentes de interface modernos
+- **Lucide React** - Ícones SVG
+- **React Router DOM** - Roteamento para React
+
+## 🎨 Paleta de cores
+
+O projeto utiliza uma paleta de cores especialmente desenvolvida para o instituto de beleza:
+
+- **Verde Escuro**: `#22503a` (beauty-dark)
+- **Verde Médio**: `#32614b` (beauty-medium) 
+- **Verde Claro**: `#e5f1ec` (beauty-light)
+- **Creme**: `#f7f8f2` (beauty-cream)
+
+## 📁 Estrutura do projeto
+
+```
+src/
+├── components/           # Componentes React
+│   ├── ui/              # Componentes de interface (shadcn/ui)
+│   ├── AboutSection.tsx # Seção "Sobre Nós"
+│   ├── CartModal.tsx    # Modal do carrinho
+│   ├── Footer.tsx       # Rodapé
+│   ├── HeroSection.tsx  # Seção inicial/hero
+│   ├── InstagramSection.tsx # Seção do Instagram
+│   ├── Navbar.tsx       # Barra de navegação
+│   └── ProductsSection.tsx # Seção de produtos
+├── pages/               # Páginas da aplicação
+├── hooks/               # Custom hooks
+├── lib/                 # Utilitários e configurações
+└── App.tsx             # Componente principal
 ```
 
-**Edit a file directly in GitHub**
+## 🛒 Funcionalidades
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Navbar responsiva** com navegação suave
+- **Seção Hero** com imagens atrativas
+- **Catálogo de produtos** com filtros por categoria
+- **Carrinho de compras** funcional
+- **Integração com WhatsApp** para finalização de pedidos
+- **Seção Instagram** com links para posts
+- **Seção "Sobre Nós"** institucional
+- **Design responsivo** para todos os dispositivos
 
-**Use GitHub Codespaces**
+## 📱 Integração com WhatsApp
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Quando o cliente finaliza o pedido, ele é redirecionado automaticamente para o WhatsApp com a lista de produtos selecionados formatada.
 
-## What technologies are used for this project?
+## 🔗 Deploy
 
-This project is built with:
+O projeto está configurado para deploy automático via Lovable. Para fazer deploy em outras plataformas:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Execute `npm run build` para gerar os arquivos de produção
+2. Os arquivos estarão na pasta `dist/`
+3. Faça upload da pasta `dist/` para seu provedor de hospedagem
 
-## How can I deploy this project?
+## 🐛 Solução de problemas
 
-Simply open [Lovable](https://lovable.dev/projects/737018b5-3773-4919-af9e-2257caebb146) and click on Share -> Publish.
+Se você encontrar algum erro:
 
-## Can I connect a custom domain to my Lovable project?
+1. **Erro de dependências**: Delete a pasta `node_modules` e execute `npm install` novamente
+2. **Porta ocupada**: O Vite tentará usar a porta 8080. Se estiver ocupada, ele sugerirá outra porta
+3. **Erro de build**: Verifique se todas as dependências estão instaladas corretamente
 
-Yes, you can!
+## 📞 Suporte
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Em caso de dúvidas ou problemas, consulte a [documentação do Vite](https://vitejs.dev/) ou abra uma issue no repositório.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+Desenvolvido com ❤️ para Belle Institute
