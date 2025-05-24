@@ -34,10 +34,10 @@ const AboutSection = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl font-bold text-beauty-dark mb-6">
-                Sobre o Belle Institute
+                Sobre a Granliss
               </h2>
               <p className="text-lg text-beauty-medium mb-6">
-                Há mais de 5 anos, o Belle Institute tem sido referência em beleza e bem-estar, 
+                Há mais de 5 anos, a Granliss tem sido referência em beleza e bem-estar, 
                 oferecendo produtos de alta qualidade e tratamentos personalizados para realçar 
                 a beleza única de cada pessoa.
               </p>

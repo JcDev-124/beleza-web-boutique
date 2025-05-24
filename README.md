@@ -1,5 +1,5 @@
 
-# Belle Institute - Instituto de Beleza Premium
+# Granliss - Instituto de Beleza Premium
 
 Um site moderno e elegante para instituto de beleza, desenvolvido com React, TypeScript e Tailwind CSS.
 
@@ -125,4 +125,4 @@ Em caso de dúvidas ou problemas, consulte a [documentação do Vite](https://vi
 
 ---
 
-Desenvolvido com ❤️ para Belle Institute
+Desenvolvido com ❤️ para Granliss
