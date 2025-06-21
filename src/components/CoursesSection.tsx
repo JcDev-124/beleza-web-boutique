@@ -1,3 +1,4 @@
+
 import { ArrowRight, Clock, Users, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,9 +7,9 @@ import { Link } from 'react-router-dom';
 const CoursesSection = () => {
   const featuredCourse = {
     id: 1,
-    title: "Técnicas Avançadas de Estética Facial",
-    description: "Aprenda as técnicas mais modernas e eficazes para tratamentos faciais profissionais.",
-    image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    title: "Formação Básica em Terapia Capilar",
+    description: "Seja um terapeuta capilar certificado pela Academia Brasileira de Tricologia. Aprenda técnicas modernas e eficazes.",
+    image: "/lovable-uploads/28cc1770-fb13-41dc-a343-1c9abf427939.png",
     duration: "40 horas",
     students: "150+",
     rating: 4.9,
@@ -90,7 +91,7 @@ const CoursesSection = () => {
                 <span className="text-3xl font-bold text-beauty-dark">{featuredCourse.price}</span>
                 <span className="text-beauty-medium ml-2">ou 12x sem juros</span>
               </div>
-              <Link to="/cursos">
+              <Link to="/curso/terapia-capilar">
                 <Button className="bg-beauty-dark hover:bg-beauty-medium text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105">
                   Ver Detalhes
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -122,7 +123,7 @@ const CoursesSection = () => {
               price: "R$ 749"
             }
           ].map((course, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
+            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer opacity-75">
               <CardContent className="p-0">
                 <div className="relative">
                   <img
@@ -141,7 +142,7 @@ const CoursesSection = () => {
                       <Clock className="w-4 h-4 text-beauty-medium" />
                       <span className="text-sm text-beauty-medium">{course.duration}</span>
                     </div>
-                    <span className="text-beauty-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-beauty-medium text-sm">
                       Em breve
                     </span>
                   </div>
@@ -149,19 +150,6 @@ const CoursesSection = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* View All Courses Button */}
-        <div className="text-center mt-12">
-          <Link to="/cursos">
-            <Button 
-              variant="outline" 
-              className="border-beauty-dark text-beauty-dark hover:bg-beauty-dark hover:text-white px-8 py-3 rounded-full transition-all duration-300"
-            >
-              Ver Todos os Cursos
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
-          </Link>
         </div>
       </div>
     </section>
