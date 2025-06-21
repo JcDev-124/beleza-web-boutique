@@ -1,4 +1,3 @@
-
 import { ArrowRight, Clock, Users, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -23,7 +22,7 @@ const CoursesSection = () => {
   };
 
   return (
-    <section className="py-20 bg-beauty-light">
+    <section id="courses" className="py-20 bg-beauty-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
