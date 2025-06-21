@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ProductsSection, { Product } from '@/components/ProductsSection';
+import CoursesSection from '@/components/CoursesSection';
 import InstagramSection from '@/components/InstagramSection';
 import AboutSection from '@/components/AboutSection';
 import CartModal from '@/components/CartModal';
@@ -70,6 +71,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <ProductsSection onAddToCart={addToCart} />
+        <CoursesSection />
         <InstagramSection />
         <AboutSection />
       </main>
