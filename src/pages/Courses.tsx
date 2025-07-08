@@ -1,4 +1,4 @@
-
+import { useEffect } from 'react';
 import { ArrowLeft, Clock, Users, Star, CheckCircle, Calendar, Award, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,6 +7,11 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const Courses = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const course = {
     id: 1,
     title: "Formação Básica em Terapia Capilar",

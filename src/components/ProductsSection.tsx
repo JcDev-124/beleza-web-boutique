@@ -1,8 +1,8 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Plus, ShoppingCart } from 'lucide-react';
+import { Plus, Search } from 'lucide-react';
 
 export interface Product {
   id: number;
@@ -70,12 +70,15 @@ const products: Product[] = [
 
 const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
+  const [searchTerm, setSearchTerm] = useState<string>('');
   
   const categories = ['Todos', 'Cuidados Faciais', 'Corpo', 'Proteção', 'Kits'];
   
-  const filteredProducts = selectedCategory === 'Todos' 
-    ? products 
-    : products.filter(product => product.category === selectedCategory);
+  const filteredProducts = products.filter(product => {
+    const matchesCategory = selectedCategory === 'Todos' || product.category === selectedCategory;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <section id="products" className="py-20 bg-white">
@@ -85,6 +88,20 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
           <p className="text-xl text-beauty-medium max-w-2xl mx-auto">
             Descubra nossa linha completa de produtos de beleza premium
           </p>
+        </div>
+
+        {/* Search Bar */}
+        <div className="max-w-md mx-auto mb-8">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-beauty-medium w-4 h-4" />
+            <Input
+              type="text"
+              placeholder="Buscar produtos..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pl-10 border-beauty-medium focus:border-beauty-dark"
+            />
+          </div>
         </div>
 
         {/* Category Filter */}
@@ -157,6 +174,15 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
             </Card>
           ))}
         </div>
+
+        {/* No products found message */}
+        {filteredProducts.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-beauty-medium text-lg">
+              Nenhum produto encontrado com os filtros aplicados.
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
