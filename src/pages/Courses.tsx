@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import { ArrowLeft, Clock, Users, Star, CheckCircle, Calendar, Award, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -5,54 +6,16 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { useSiteData } from '@/contexts/SiteDataContext';
 
 const Courses = () => {
+  const { siteData } = useSiteData();
+  const { course } = siteData;
+
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const course = {
-    id: 1,
-    title: "Formação Básica em Terapia Capilar",
-    description: "Seja um terapeuta capilar certificado pela Academia Brasileira de Tricologia.",
-    fullDescription: "Este curso abrangente oferece uma formação completa em terapia capilar, cobrindo desde técnicas básicas até procedimentos avançados. Você aprenderá sobre anatomia capilar, tipos de cabelo, protocolos de tratamento e as mais modernas tecnologias do mercado para tratamento de problemas capilares.",
-    image: "/lovable-uploads/28cc1770-fb13-41dc-a343-1c9abf427939.png",
-    duration: "40 horas",
-    students: "150+",
-    rating: 4.9,
-    price: "R$ 1.299",
-    installments: "12x de R$ 108,25 sem juros",
-    instructor: "Dra. Marina Silva",
-    instructorImage: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-    level: "Básico a Intermediário",
-    schedule: ["Segunda: 14:00 - 18:00", "Quarta: 14:00 - 18:00", "Sexta: 14:00 - 18:00"],
-    whatYouLearn: [
-      "Anatomia e fisiologia do couro cabeludo",
-      "Tricoscopia e análise capilar",
-      "Protocolos de tratamento para alopecia",
-      "Técnicas de microagulhamento capilar",
-      "Uso de equipamentos especializados",
-      "Aplicação de terapias capilares",
-      "Atendimento e consultoria ao cliente",
-      "Certificação pela Academia Brasileira de Tricologia"
-    ],
-    requirements: [
-      "Maior de 18 anos",
-      "Ensino médio completo",
-      "Interesse em área da saúde capilar",
-      "Disponibilidade para aulas práticas"
-    ],
-    certificate: true,
-    highlights: [
-      "Certificado reconhecido ABT",
-      "Aulas práticas em modelos reais",
-      "Kit de produtos incluso",
-      "Suporte pós-curso",
-      "Networking profissional"
-    ],
-    whatsappNumber: "5516988099466"
-  };
 
   const handleWhatsAppContact = () => {
     const message = `Olá! Gostaria de mais informações sobre o curso "${course.title}". Pode me ajudar?`;

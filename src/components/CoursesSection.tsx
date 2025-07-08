@@ -3,24 +3,11 @@ import { ArrowRight, Clock, Users, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import { useSiteData } from '@/contexts/SiteDataContext';
 
 const CoursesSection = () => {
-  const featuredCourse = {
-    id: 1,
-    title: "Formação Básica em Terapia Capilar",
-    description: "Seja um terapeuta capilar certificado pela Academia Brasileira de Tricologia. Aprenda técnicas modernas e eficazes.",
-    image: "/lovable-uploads/28cc1770-fb13-41dc-a343-1c9abf427939.png",
-    duration: "40 horas",
-    students: "150+",
-    rating: 4.9,
-    price: "R$ 1.299",
-    highlights: [
-      "Certificado profissional",
-      "Aulas práticas e teóricas", 
-      "Suporte personalizado",
-      "Material incluso"
-    ]
-  };
+  const { siteData } = useSiteData();
+  const { course, coursesSectionTitle, coursesSectionSubtitle } = siteData;
 
   return (
     <section id="courses" className="py-20 bg-beauty-light">
@@ -28,11 +15,10 @@ const CoursesSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-beauty-dark mb-4">
-            Cursos Profissionalizantes
+            {coursesSectionTitle}
           </h2>
           <p className="text-xl text-beauty-medium max-w-3xl mx-auto">
-            Desenvolva suas habilidades com nossos cursos especializados em estética e beleza. 
-            Aprenda com profissionais experientes e conquiste sua certificação.
+            {coursesSectionSubtitle}
           </p>
         </div>
 
@@ -40,9 +26,9 @@ const CoursesSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="relative">
             <img
-              src={featuredCourse.image}
-              alt={featuredCourse.title}
-              className="w-full h-96 object-cover rounded-2xl shadow-xl"
+              src={course.image}
+              alt={course.title}
+              className="w-full h-96 object-contain rounded-2xl shadow-xl bg-white"
             />
             <div className="absolute top-6 left-6 bg-beauty-dark text-white px-4 py-2 rounded-full text-sm font-semibold">
               Curso em Destaque
@@ -52,10 +38,10 @@ const CoursesSection = () => {
           <div className="space-y-6">
             <div>
               <h3 className="text-3xl font-bold text-beauty-dark mb-4">
-                {featuredCourse.title}
+                {course.title}
               </h3>
               <p className="text-lg text-beauty-medium mb-6">
-                {featuredCourse.description}
+                {course.description}
               </p>
             </div>
 
@@ -63,21 +49,21 @@ const CoursesSection = () => {
             <div className="flex items-center space-x-6 mb-6">
               <div className="flex items-center space-x-2">
                 <Clock className="w-5 h-5 text-beauty-medium" />
-                <span className="text-beauty-medium">{featuredCourse.duration}</span>
+                <span className="text-beauty-medium">{course.duration}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Users className="w-5 h-5 text-beauty-medium" />
-                <span className="text-beauty-medium">{featuredCourse.students} alunos</span>
+                <span className="text-beauty-medium">{course.students} alunos</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Star className="w-5 h-5 text-yellow-500 fill-current" />
-                <span className="text-beauty-medium">{featuredCourse.rating}</span>
+                <span className="text-beauty-medium">{course.rating}</span>
               </div>
             </div>
 
             {/* Highlights */}
             <div className="space-y-3 mb-8">
-              {featuredCourse.highlights.map((highlight, index) => (
+              {course.highlights.map((highlight, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-beauty-medium rounded-full"></div>
                   <span className="text-beauty-medium">{highlight}</span>
@@ -88,7 +74,7 @@ const CoursesSection = () => {
             {/* Price and CTA */}
             <div className="flex items-center justify-between">
               <div>
-                <span className="text-3xl font-bold text-beauty-dark">{featuredCourse.price}</span>
+                <span className="text-3xl font-bold text-beauty-dark">{course.price}</span>
                 <span className="text-beauty-medium ml-2">ou 12x sem juros</span>
               </div>
               <Link to="/curso/terapia-capilar">
@@ -122,25 +108,25 @@ const CoursesSection = () => {
               duration: "25 horas",
               price: "R$ 749"
             }
-          ].map((course, index) => (
+          ].map((courseItem, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer opacity-75">
               <CardContent className="p-0">
                 <div className="relative">
                   <img
-                    src={course.image}
-                    alt={course.title}
+                    src={courseItem.image}
+                    alt={courseItem.title}
                     className="w-full h-48 object-cover rounded-t-lg"
                   />
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-beauty-dark">
-                    {course.price}
+                    {courseItem.price}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h4 className="font-bold text-beauty-dark mb-2">{course.title}</h4>
+                  <h4 className="font-bold text-beauty-dark mb-2">{courseItem.title}</h4>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
                       <Clock className="w-4 h-4 text-beauty-medium" />
-                      <span className="text-sm text-beauty-medium">{course.duration}</span>
+                      <span className="text-sm text-beauty-medium">{courseItem.duration}</span>
                     </div>
                     <span className="text-beauty-medium text-sm">
                       Em breve

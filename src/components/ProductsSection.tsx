@@ -1,8 +1,10 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Plus, Search } from 'lucide-react';
+import { useSiteData } from '@/contexts/SiteDataContext';
 
 export interface Product {
   id: number;
@@ -17,58 +19,10 @@ interface ProductsSectionProps {
   onAddToCart: (product: Product) => void;
 }
 
-const products: Product[] = [
-  {
-    id: 1,
-    name: "Sérum Facial Vitamina C",
-    description: "Sérum antioxidante que ilumina e rejuvenesce a pele",
-    price: 89.90,
-    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    category: "Cuidados Faciais"
-  },
-  {
-    id: 2,
-    name: "Creme Hidratante Noturno",
-    description: "Hidratação profunda durante o sono para pele radiante",
-    price: 125.90,
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    category: "Cuidados Faciais"
-  },
-  {
-    id: 3,
-    name: "Óleo Corporal Relaxante",
-    description: "Óleo natural com lavanda para relaxamento e hidratação",
-    price: 67.90,
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    category: "Corpo"
-  },
-  {
-    id: 4,
-    name: "Máscara Facial Purificante",
-    description: "Remove impurezas e deixa a pele limpa e suave",
-    price: 45.90,
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    category: "Cuidados Faciais"
-  },
-  {
-    id: 5,
-    name: "Protetor Solar Natural",
-    description: "Proteção solar FPS 60 com ingredientes naturais",
-    price: 78.90,
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    category: "Proteção"
-  },
-  {
-    id: 6,
-    name: "Kit Limpeza Facial",
-    description: "Kit completo para limpeza profunda da pele",
-    price: 156.90,
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    category: "Kits"
-  }
-];
-
 const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
+  const { siteData } = useSiteData();
+  const { products, productsSectionTitle, productsSectionSubtitle } = siteData;
+  
   const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
   const [searchTerm, setSearchTerm] = useState<string>('');
   
@@ -84,9 +38,9 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
     <section id="products" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-beauty-dark mb-4">Nossos Produtos</h2>
+          <h2 className="text-4xl font-bold text-beauty-dark mb-4">{productsSectionTitle}</h2>
           <p className="text-xl text-beauty-medium max-w-2xl mx-auto">
-            Descubra nossa linha completa de produtos de beleza premium
+            {productsSectionSubtitle}
           </p>
         </div>
 
