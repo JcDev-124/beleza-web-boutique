@@ -1,4 +1,3 @@
-
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,12 +6,13 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useSiteData } from '@/contexts/SiteDataContext';
 import { useToast } from '@/hooks/use-toast';
+import ImageUploadField from './ImageUploadField';
 
 const AboutConfig = () => {
   const { siteData, updateAbout } = useSiteData();
   const { toast } = useToast();
   
-  const { register, handleSubmit, watch } = useForm({
+  const { register, handleSubmit, watch, setValue } = useForm({
     defaultValues: siteData.about
   });
 
@@ -71,54 +71,24 @@ const AboutConfig = () => {
           <CardTitle>Imagens</CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
-          <div>
-            <Label htmlFor="mainImage">Imagem Principal</Label>
-            <Input
-              id="mainImage"
-              {...register('mainImage')}
-              className="mt-1"
-            />
-            {watchedData.mainImage && (
-              <img
-                src={watchedData.mainImage}
-                alt="Preview"
-                className="mt-2 w-full h-48 object-cover rounded-lg"
-              />
-            )}
-          </div>
+          <ImageUploadField
+            label="Imagem Principal"
+            value={watchedData.mainImage || ''}
+            onChange={(value) => setValue('mainImage', value)}
+          />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="image1">Imagem Secundária 1</Label>
-              <Input
-                id="image1"
-                {...register('image1')}
-                className="mt-1"
-              />
-              {watchedData.image1 && (
-                <img
-                  src={watchedData.image1}
-                  alt="Preview"
-                  className="mt-2 w-full h-32 object-cover rounded-lg"
-                />
-              )}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <ImageUploadField
+              label="Imagem Secundária 1"
+              value={watchedData.image1 || ''}
+              onChange={(value) => setValue('image1', value)}
+            />
             
-            <div>
-              <Label htmlFor="image2">Imagem Secundária 2</Label>
-              <Input
-                id="image2"
-                {...register('image2')}
-                className="mt-1"
-              />
-              {watchedData.image2 && (
-                <img
-                  src={watchedData.image2}
-                  alt="Preview"
-                  className="mt-2 w-full h-32 object-cover rounded-lg"
-                />
-              )}
-            </div>
+            <ImageUploadField
+              label="Imagem Secundária 2"
+              value={watchedData.image2 || ''}
+              onChange={(value) => setValue('image2', value)}
+            />
           </div>
         </CardContent>
       </Card>

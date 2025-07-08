@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -11,6 +10,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { useSiteData } from '@/contexts/SiteDataContext';
 import { useToast } from '@/hooks/use-toast';
 import { Plus, Edit, Trash2 } from 'lucide-react';
+import ImageUploadField from './ImageUploadField';
 import type { ProductData } from '@/contexts/SiteDataContext';
 
 const ProductsConfig = () => {
@@ -42,7 +42,6 @@ const ProductsConfig = () => {
   });
 
   const watchedImage = watch('image');
-
   const categories = ['Cuidados Faciais', 'Corpo', 'Proteção', 'Kits'];
 
   const onSubmitProduct = (data: ProductData) => {
@@ -208,21 +207,11 @@ const ProductsConfig = () => {
                   </div>
                 </div>
                 
-                <div>
-                  <Label htmlFor="image">URL da Imagem</Label>
-                  <Input
-                    id="image"
-                    {...register('image', { required: true })}
-                    className="mt-1"
-                  />
-                  {watchedImage && (
-                    <img
-                      src={watchedImage}
-                      alt="Preview"
-                      className="mt-2 w-full h-48 object-cover rounded-lg"
-                    />
-                  )}
-                </div>
+                <ImageUploadField
+                  label="Imagem do Produto"
+                  value={watchedImage || ''}
+                  onChange={(value) => setValue('image', value)}
+                />
                 
                 <div className="flex justify-end space-x-2 pt-4">
                   <Button

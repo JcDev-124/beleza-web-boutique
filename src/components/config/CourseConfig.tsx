@@ -1,4 +1,3 @@
-
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,12 +6,13 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useSiteData } from '@/contexts/SiteDataContext';
 import { useToast } from '@/hooks/use-toast';
+import ImageUploadField from './ImageUploadField';
 
 const CourseConfig = () => {
   const { siteData, updateCourse, updateSiteData } = useSiteData();
   const { toast } = useToast();
   
-  const { register, handleSubmit, watch } = useForm({
+  const { register, handleSubmit, watch, setValue } = useForm({
     defaultValues: {
       ...siteData.course,
       coursesSectionTitle: siteData.coursesSectionTitle,
@@ -101,21 +101,11 @@ const CourseConfig = () => {
             />
           </div>
           
-          <div>
-            <Label htmlFor="image">URL da Imagem Principal</Label>
-            <Input
-              id="image"
-              {...register('image')}
-              className="mt-1"
-            />
-            {watchedData.image && (
-              <img
-                src={watchedData.image}
-                alt="Preview"
-                className="mt-2 w-full h-48 object-contain rounded-lg bg-white"
-              />
-            )}
-          </div>
+          <ImageUploadField
+            label="Imagem Principal do Curso"
+            value={watchedData.image || ''}
+            onChange={(value) => setValue('image', value)}
+          />
         </CardContent>
       </Card>
 
@@ -198,21 +188,11 @@ const CourseConfig = () => {
             />
           </div>
           
-          <div>
-            <Label htmlFor="instructorImage">Foto do Instrutor</Label>
-            <Input
-              id="instructorImage"
-              {...register('instructorImage')}
-              className="mt-1"
-            />
-            {watchedData.instructorImage && (
-              <img
-                src={watchedData.instructorImage}
-                alt="Preview"
-                className="mt-2 w-24 h-24 object-cover rounded-full"
-              />
-            )}
-          </div>
+          <ImageUploadField
+            label="Foto do Instrutor"
+            value={watchedData.instructorImage || ''}
+            onChange={(value) => setValue('instructorImage', value)}
+          />
         </CardContent>
       </Card>
 
