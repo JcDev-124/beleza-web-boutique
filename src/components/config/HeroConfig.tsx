@@ -8,14 +8,20 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useSiteData } from '@/contexts/SiteDataContext';
 import { useToast } from '@/hooks/use-toast';
 import ImageUploadField from './ImageUploadField';
+import { useEffect } from 'react';
 
 const HeroConfig = () => {
   const { siteData, updateHero } = useSiteData();
   const { toast } = useToast();
   
-  const { register, handleSubmit, watch, setValue } = useForm({
+  const { register, handleSubmit, watch, setValue, reset } = useForm({
     defaultValues: siteData.hero
   });
+
+  // Atualiza o formulário quando os dados do contexto mudarem
+  useEffect(() => {
+    reset(siteData.hero);
+  }, [siteData.hero, reset]);
 
   const watchedData = watch();
 

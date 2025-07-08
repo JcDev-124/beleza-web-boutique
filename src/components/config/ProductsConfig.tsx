@@ -1,4 +1,5 @@
-import { useState } from 'react';
+
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -33,13 +34,21 @@ const ProductsConfig = () => {
   const {
     register: registerSection,
     handleSubmit: handleSubmitSection,
-    formState: { errors: sectionErrors }
+    reset: resetSection
   } = useForm({
     defaultValues: {
       productsSectionTitle: siteData.productsSectionTitle,
       productsSectionSubtitle: siteData.productsSectionSubtitle
     }
   });
+
+  // Atualiza o formulário da seção quando os dados do contexto mudarem
+  useEffect(() => {
+    resetSection({
+      productsSectionTitle: siteData.productsSectionTitle,
+      productsSectionSubtitle: siteData.productsSectionSubtitle
+    });
+  }, [siteData.productsSectionTitle, siteData.productsSectionSubtitle, resetSection]);
 
   const watchedImage = watch('image');
   const categories = ['Cuidados Faciais', 'Corpo', 'Proteção', 'Kits'];

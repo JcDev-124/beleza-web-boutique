@@ -1,3 +1,4 @@
+
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,18 +8,28 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useSiteData } from '@/contexts/SiteDataContext';
 import { useToast } from '@/hooks/use-toast';
 import ImageUploadField from './ImageUploadField';
+import { useEffect } from 'react';
 
 const CourseConfig = () => {
   const { siteData, updateCourse, updateSiteData } = useSiteData();
   const { toast } = useToast();
   
-  const { register, handleSubmit, watch, setValue } = useForm({
+  const { register, handleSubmit, watch, setValue, reset } = useForm({
     defaultValues: {
       ...siteData.course,
       coursesSectionTitle: siteData.coursesSectionTitle,
       coursesSectionSubtitle: siteData.coursesSectionSubtitle
     }
   });
+
+  // Atualiza o formulário quando os dados do contexto mudarem
+  useEffect(() => {
+    reset({
+      ...siteData.course,
+      coursesSectionTitle: siteData.coursesSectionTitle,
+      coursesSectionSubtitle: siteData.coursesSectionSubtitle
+    });
+  }, [siteData.course, siteData.coursesSectionTitle, siteData.coursesSectionSubtitle, reset]);
 
   const watchedData = watch();
 
