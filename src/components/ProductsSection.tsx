@@ -77,39 +77,41 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredProducts.map((product, index) => (
             <Card 
               key={product.id} 
-              className="group hover:shadow-xl transition-all duration-300 border-beauty-light hover:border-beauty-medium overflow-hidden flex flex-col h-full"
+              className="group hover:shadow-xl transition-all duration-300 border-beauty-light hover:border-beauty-medium overflow-hidden flex flex-col h-full bg-white"
               style={{
                 animationDelay: `${index * 100}ms`
               }}
             >
-              <div className="relative overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute top-4 right-4">
-                  <span className="bg-beauty-medium text-white px-2 py-1 rounded-full text-xs font-semibold">
+              <div className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white p-4">
+                <div className="aspect-[3/4] relative">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-lg"
+                  />
+                </div>
+                <div className="absolute top-6 right-6">
+                  <span className="bg-beauty-medium text-white px-2 py-1 rounded-full text-xs font-semibold shadow-sm">
                     {product.category}
                   </span>
                 </div>
               </div>
               
-              <CardHeader className="flex-grow">
-                <CardTitle className="text-beauty-dark group-hover:text-beauty-medium transition-colors">
+              <CardHeader className="flex-grow pb-2">
+                <CardTitle className="text-beauty-dark group-hover:text-beauty-medium transition-colors text-lg font-semibold leading-tight">
                   {product.name}
                 </CardTitle>
-                <CardDescription className="text-beauty-medium">
+                <CardDescription className="text-beauty-medium text-sm line-clamp-2">
                   {product.description}
                 </CardDescription>
               </CardHeader>
               
               <CardContent className="pb-4">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-center">
                   <span className="text-2xl font-bold text-beauty-dark">
                     R$ {product.price.toFixed(2)}
                   </span>
@@ -119,7 +121,7 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
               <CardFooter className="mt-auto pt-0">
                 <Button 
                   onClick={() => onAddToCart(product)}
-                  className="w-full bg-beauty-medium hover:bg-beauty-dark text-white"
+                  className="w-full bg-beauty-medium hover:bg-beauty-dark text-white transition-all duration-200 font-medium"
                 >
                   <Plus className="w-4 h-4 mr-2" />
                   Adicionar ao Carrinho
