@@ -32,7 +32,7 @@ const CartModal = ({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem 
     
     message += `\nTotal: R$ ${total.toFixed(2)}\n\nObrigado!`;
     
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5516988099466?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
