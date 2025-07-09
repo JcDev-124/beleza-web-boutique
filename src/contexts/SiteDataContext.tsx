@@ -284,6 +284,86 @@ const initialSiteData: SiteData = {
       price: 145.90,
       image: "/lovable-uploads/1c37744d-bc56-49fa-bc4c-97af508f3930.png",
       category: "Kits"
+    },
+    {
+      id: 21,
+      name: "Dry Confort Liquid Control",
+      description: "Controle líquido com arnica montana, capim limão e OE de melaleuca para cabelos ressecados",
+      price: 72.90,
+      image: "/lovable-uploads/70ceb137-e1f6-40d6-be6e-60463d92db34.png",
+      category: "Proteção"
+    },
+    {
+      id: 22,
+      name: "Dry Confort Conditioner",
+      description: "Condicionador nutritivo com arnica montana, capim limão e óleo de melaleuca",
+      price: 68.90,
+      image: "/lovable-uploads/e774f128-4f5e-43bd-8cbb-c423aa316140.png",
+      category: "Corpo"
+    },
+    {
+      id: 23,
+      name: "Dry Confort Shampoo",
+      description: "Shampoo hidratante com arnica montana, capim limão e óleo de melaleuca",
+      price: 64.90,
+      image: "/lovable-uploads/cf8ce020-afd8-4ce8-afb9-fbf39b19d3f1.png",
+      category: "Cuidados Faciais"
+    },
+    {
+      id: 24,
+      name: "Kit Dry Confort Completo",
+      description: "Kit completo Dry Confort com shampoo, condicionador e liquid control",
+      price: 189.90,
+      image: "/lovable-uploads/93ef42ed-dde8-4e77-8d02-f7fddc22df40.png",
+      category: "Kits"
+    },
+    {
+      id: 25,
+      name: "Fito Capillus Hair & Scalp Massage",
+      description: "Elixir de massagem com ação calmante e antioxidante para revitalização capilar",
+      price: 98.90,
+      image: "/lovable-uploads/993b4239-f407-45dd-9bf4-63cdb0fb638d.png",
+      category: "Corpo"
+    },
+    {
+      id: 26,
+      name: "Fito Capillus Eucalyptus Balm Conditioner",
+      description: "Condicionador bálsamo com eucalipto para prevenção do estresse e controle da microbiota",
+      price: 76.90,
+      image: "/lovable-uploads/73625bde-a712-4a62-bc58-56ee94569cef.png",
+      category: "Corpo"
+    },
+    {
+      id: 27,
+      name: "Fito Capillus Eucalyptus Shampoo",
+      description: "Shampoo com eucalipto para prevenção do estresse e controle da microbiota do couro cabeludo",
+      price: 71.90,
+      image: "/lovable-uploads/bda81fc8-b49f-443c-875a-68c63d6fe765.png",
+      category: "Cuidados Faciais"
+    },
+    {
+      id: 28,
+      name: "Fito Capillus Fine Herbal Shampoo",
+      description: "Shampoo herbal para limpeza e desobstrução do sistema capilar",
+      price: 69.90,
+      image: "/lovable-uploads/15659dd5-d0fc-43fc-ae3e-ab62d63b3ed2.png",
+      category: "Cuidados Faciais"
+    },
+    {
+      id: 29,
+      name: "Flowers Leave-On - Girassol e Palmarosa",
+      description: "Leave-on nutritivo com girassol, camomila e óleo de palmarosa para cabelos naturais",
+      price: 54.90,
+      image: "/lovable-uploads/3845a338-a09e-48d5-b1ba-dc6154e0ef4a.png",
+      category: "Proteção"
+    },
+    {
+      id: 30,
+      name: "Flowers Conditioner - Camomila e Palmarosa",
+      description: "Condicionador natural com girassol, camomila e óleo de palmarosa para nutrição profunda",
+      price: 59.90,
+      image: "/lovable-uploads/7f74480d-a806-4f31-947d-486319b2411d.png",
+      category: "Corpo"
     }
   ],
   course: {
@@ -327,7 +407,7 @@ const initialSiteData: SiteData = {
     whatsappNumber: "5516988099466"
   },
   productsSectionTitle: "Nossos Produtos",
-  productsSectionSubtitle: "Descubra nossa linha completa de produtos capilares premium da Grandha",
+  productsSectionSubtitle: "Descubra nossa linha completa de produtos capilares premium da Grandha com tecnologia avançada para todos os tipos de cabelo",
   coursesSectionTitle: "Cursos Profissionalizantes",
   coursesSectionSubtitle: "Desenvolva suas habilidades com nossos cursos especializados em estética e beleza. Aprenda com profissionais experientes e conquiste sua certificação."
 };
