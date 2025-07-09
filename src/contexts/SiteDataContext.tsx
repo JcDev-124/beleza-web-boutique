@@ -127,51 +127,83 @@ const initialSiteData: SiteData = {
   products: [
     {
       id: 1,
-      name: "Sérum Facial Vitamina C",
-      description: "Sérum antioxidante que ilumina e rejuvenesce a pele",
+      name: "Tônico Capilar - Aloe Vera e Ginseng",
+      description: "Tônico fortificante com aloe vera, ginseng e óleo de alecrim para estimular o crescimento capilar",
       price: 89.90,
-      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/lovable-uploads/1734476d-d512-47e5-b4d5-d5daef93a56d.png",
       category: "Cuidados Faciais"
     },
     {
       id: 2,
-      name: "Creme Hidratante Noturno",
-      description: "Hidratação profunda durante o sono para pele radiante",
-      price: 125.90,
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      category: "Cuidados Faciais"
+      name: "Kit Tônico - Tratamento Completo",
+      description: "Kit completo com tônico, baba d'aloe e growing fluid para tratamento capilar intensivo",
+      price: 189.90,
+      image: "/lovable-uploads/160514a8-4fd3-4a9c-8ce9-e9359a66a4dc.png",
+      category: "Kits"
     },
     {
       id: 3,
-      name: "Óleo Corporal Relaxante",
-      description: "Óleo natural com lavanda para relaxamento e hidratação",
+      name: "Touch Energy Shampoo",
+      description: "Shampoo energizante com guaraná, gengibre e óleo de laranja doce para cabelos sem vida",
       price: 67.90,
-      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/lovable-uploads/649a9702-18f6-4a54-99c0-0b13005a770c.png",
       category: "Corpo"
     },
     {
       id: 4,
-      name: "Máscara Facial Purificante",
-      description: "Remove impurezas e deixa a pele limpa e suave",
-      price: 45.90,
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      name: "Fito Capillus Olive Shampoo",
+      description: "Shampoo profissional para limpeza e controle da microbiota do couro cabeludo",
+      price: 78.90,
+      image: "/lovable-uploads/6a2b4f9a-d8f5-4c18-b0c5-efba2ae6fdc4.png",
       category: "Cuidados Faciais"
     },
     {
       id: 5,
-      name: "Protetor Solar Natural",
-      description: "Proteção solar FPS 60 com ingredientes naturais",
-      price: 78.90,
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      name: "Refresh Leave-On - Calêndula e Lavanda",
+      description: "Leave-on com calêndula, hortelã e óleo de lavanda francesa para hidratação e proteção",
+      price: 45.90,
+      image: "/lovable-uploads/f901d1ce-7630-4e0b-a40b-60c0c7af5e6b.png",
       category: "Proteção"
     },
     {
       id: 6,
-      name: "Kit Limpeza Facial",
-      description: "Kit completo para limpeza profunda da pele",
-      price: 156.90,
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      name: "Refresh Conditioner",
+      description: "Condicionador com calêndula, hortelã e óleo de lavanda francesa para nutrição profunda",
+      price: 56.90,
+      image: "/lovable-uploads/7347c515-30f4-4599-83c7-4c42603b0c24.png",
+      category: "Corpo"
+    },
+    {
+      id: 7,
+      name: "Refresh Shampoo - Lavanda Francesa",
+      description: "Shampoo com calêndula, hortelã e óleo de lavanda francesa para limpeza suave",
+      price: 52.90,
+      image: "/lovable-uploads/02f1bc28-de3d-4c3e-8ace-53a2e22f5e8e.png",
+      category: "Cuidados Faciais"
+    },
+    {
+      id: 8,
+      name: "Kit Refresh Completo",
+      description: "Kit completo Refresh com shampoo, condicionador e leave-on para cuidado total",
+      price: 139.90,
+      image: "/lovable-uploads/3b895065-02f6-4c18-b911-b9b21b61aa92.png",
       category: "Kits"
+    },
+    {
+      id: 9,
+      name: "Tônico Growing Fluid",
+      description: "Fluido estimulante com aloe vera, ginseng e óleo de alecrim para crescimento capilar",
+      price: 67.90,
+      image: "/lovable-uploads/cf29d782-f374-4c5b-b2a5-ee6690fe98e6.png",
+      category: "Proteção"
+    },
+    {
+      id: 10,
+      name: "Tônico Baba D'Aloe",
+      description: "Tratamento intensivo com baba d'aloe para couro cabeludo sensível e ressecado",
+      price: 74.90,
+      image: "/lovable-uploads/fb8211bd-e161-46b0-a1bf-1aec97991072.png",
+      category: "Corpo"
     }
   ],
   course: {
@@ -215,7 +247,7 @@ const initialSiteData: SiteData = {
     whatsappNumber: "5516988099466"
   },
   productsSectionTitle: "Nossos Produtos",
-  productsSectionSubtitle: "Descubra nossa linha completa de produtos de beleza premium",
+  productsSectionSubtitle: "Descubra nossa linha completa de produtos capilares premium da Grandha",
   coursesSectionTitle: "Cursos Profissionalizantes",
   coursesSectionSubtitle: "Desenvolva suas habilidades com nossos cursos especializados em estética e beleza. Aprenda com profissionais experientes e conquiste sua certificação."
 };
