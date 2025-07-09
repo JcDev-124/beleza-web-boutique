@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Plus, Search } from 'lucide-react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Plus, Search, ChevronDown, ChevronUp } from 'lucide-react';
 import { useSiteData } from '@/contexts/SiteDataContext';
 
 export interface Product {
@@ -25,6 +25,7 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
   
   const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
   const [searchTerm, setSearchTerm] = useState<string>('');
+  const [showAllProducts, setShowAllProducts] = useState<boolean>(false);
   
   const categories = ['Todos', 'Cuidados Faciais', 'Corpo', 'Proteção', 'Kits'];
   
@@ -33,6 +34,10 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  // Limitar produtos exibidos com base no estado showAllProducts
+  const productsToShow = showAllProducts ? filteredProducts : filteredProducts.slice(0, 9);
+  const hasMoreProducts = filteredProducts.length > 9;
 
   return (
     <section id="products" className="py-20 bg-white">
@@ -76,9 +81,9 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
           ))}
         </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filteredProducts.map((product, index) => (
+        {/* Products Grid - Limited to 3 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {productsToShow.map((product, index) => (
             <Card 
               key={product.id} 
               className="group hover:shadow-xl transition-all duration-300 border-beauty-light hover:border-beauty-medium overflow-hidden flex flex-col h-full bg-white"
@@ -105,9 +110,6 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
                 <CardTitle className="text-beauty-dark group-hover:text-beauty-medium transition-colors text-lg font-semibold leading-tight">
                   {product.name}
                 </CardTitle>
-                <CardDescription className="text-beauty-medium text-sm line-clamp-2">
-                  {product.description}
-                </CardDescription>
               </CardHeader>
               
               <CardContent className="pb-4">
@@ -130,6 +132,29 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
             </Card>
           ))}
         </div>
+
+        {/* Ver Mais / Ver Menos Button */}
+        {hasMoreProducts && (
+          <div className="text-center mt-12">
+            <Button
+              onClick={() => setShowAllProducts(!showAllProducts)}
+              variant="outline"
+              className="border-beauty-medium text-beauty-medium hover:bg-beauty-light px-8 py-3"
+            >
+              {showAllProducts ? (
+                <>
+                  <ChevronUp className="w-4 h-4 mr-2" />
+                  Ver Menos
+                </>
+              ) : (
+                <>
+                  <ChevronDown className="w-4 h-4 mr-2" />
+                  Ver Mais ({filteredProducts.length - 9} produtos)
+                </>
+              )}
+            </Button>
+          </div>
+        )}
 
         {/* No products found message */}
         {filteredProducts.length === 0 && (
