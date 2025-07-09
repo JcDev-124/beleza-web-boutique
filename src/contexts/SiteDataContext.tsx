@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 // Interfaces para os dados do site
@@ -364,6 +363,38 @@ const initialSiteData: SiteData = {
       price: 59.90,
       image: "/lovable-uploads/7f74480d-a806-4f31-947d-486319b2411d.png",
       category: "Corpo"
+    },
+    {
+      id: 31,
+      name: "Body Seduction - Óleo Perfumado Corporal",
+      description: "Óleo perfumado para textura corporal da linha Celebration com fragrância sedutora",
+      price: 89.90,
+      image: "/lovable-uploads/39c5d260-14fa-4015-b1e3-f9cb89b0f2a6.png",
+      category: "Corpo"
+    },
+    {
+      id: 32,
+      name: "Urbano SPA Coacervado Ultra Resist",
+      description: "Hair therapy profissional para reparação extrema e redensificação da fibra capilar",
+      price: 135.90,
+      image: "/lovable-uploads/e7c6a99d-a431-4f18-9e04-08197228b471.png",
+      category: "Proteção"
+    },
+    {
+      id: 33,
+      name: "MixOil Acqua Soft - Coconut & Argan",
+      description: "Água de coco refrescante para o corpo com toque de óleo essencial de lavanda francesa",
+      price: 78.90,
+      image: "/lovable-uploads/766f2005-a94a-4acb-ac9d-c872597cf2be.png",
+      category: "Corpo"
+    },
+    {
+      id: 34,
+      name: "Urbano SPA Black Pearl Shampoo",
+      description: "Shampoo profissional para preservação e renovação da fibra capilar com pérola negra",
+      price: 98.90,
+      image: "/lovable-uploads/2a6380e5-5221-42a4-b653-c2347128cc1e.png",
+      category: "Cuidados Faciais"
     }
   ],
   course: {
