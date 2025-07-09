@@ -204,6 +204,86 @@ const initialSiteData: SiteData = {
       price: 74.90,
       image: "/lovable-uploads/fb8211bd-e161-46b0-a1bf-1aec97991072.png",
       category: "Corpo"
+    },
+    {
+      id: 11,
+      name: "Flowers Shampoo - Girassol e Camomila",
+      description: "Shampoo com girassol, camomila e óleo de palmarosa para cabelos naturais",
+      price: 62.90,
+      image: "/lovable-uploads/96014bed-aa04-48f2-a5ef-8ca257bfda7a.png",
+      category: "Cuidados Faciais"
+    },
+    {
+      id: 12,
+      name: "Kit Flowers Completo",
+      description: "Kit completo Flowers com shampoo, condicionador e leave-on para tratamento natural",
+      price: 155.90,
+      image: "/lovable-uploads/dce20d50-5a53-4241-a0a8-c114c9544b2a.png",
+      category: "Kits"
+    },
+    {
+      id: 13,
+      name: "Fito Capillus Fluid Tonic Repair",
+      description: "Tônico reparador com tecnologia avançada para estimular crescimento e fortalecer fios",
+      price: 95.90,
+      image: "/lovable-uploads/1ffe5e5b-620f-47e7-ad62-3d954946d795.png",
+      category: "Proteção"
+    },
+    {
+      id: 14,
+      name: "Kit Fito Capillus Profissional",
+      description: "Kit profissional completo para terapia capilar com todos os produtos da linha",
+      price: 289.90,
+      image: "/lovable-uploads/0a2339a4-d5fe-48fc-a21f-92c2145e8508.png",
+      category: "Kits"
+    },
+    {
+      id: 15,
+      name: "Urbano SPA Magma Power Growth",
+      description: "Sérum concentrado com fatores de crescimento para biomodulação do folículo capilar",
+      price: 127.90,
+      image: "/lovable-uploads/eae98540-4676-4550-8b49-6e4566fc16f7.png",
+      category: "Proteção"
+    },
+    {
+      id: 16,
+      name: "Fito Capillus Olive Oil Conditioner",
+      description: "Condicionador com óleo de oliva para equilibrar microbiota e recondicionar fios",
+      price: 69.90,
+      image: "/lovable-uploads/58592ee8-2741-4169-b10c-45c4eb9ad71c.png",
+      category: "Corpo"
+    },
+    {
+      id: 17,
+      name: "Fito Capillus Time Massage Cream",
+      description: "Creme para massagem capilar que estimula conforto e equilíbrio da microbiota",
+      price: 85.90,
+      image: "/lovable-uploads/164410ce-d806-497e-bd94-483561460ee7.png",
+      category: "Corpo"
+    },
+    {
+      id: 18,
+      name: "Touch Energy Leave-On",
+      description: "Leave-on energizante com guaraná, gengibre e óleo de laranja doce",
+      price: 48.90,
+      image: "/lovable-uploads/20b1cee8-fb77-42fa-b4c5-abb6896e3cf2.png",
+      category: "Proteção"
+    },
+    {
+      id: 19,
+      name: "Touch Energy Power Gel",
+      description: "Gel energizante para modelagem com guaraná, gengibre e óleo de laranja doce",
+      price: 42.90,
+      image: "/lovable-uploads/cc40388a-a152-4e76-88ae-e389a12951d2.png",
+      category: "Corpo"
+    },
+    {
+      id: 20,
+      name: "Kit Touch Energy Completo",
+      description: "Kit completo Touch Energy com shampoo, power gel e leave-on energizante",
+      price: 145.90,
+      image: "/lovable-uploads/1c37744d-bc56-49fa-bc4c-97af508f3930.png",
+      category: "Kits"
     }
   ],
   course: {
