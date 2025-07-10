@@ -27,7 +27,7 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [showAllProducts, setShowAllProducts] = useState<boolean>(false);
   
-  const categories = ['Todos', 'Cuidados Faciais', 'Corpo', 'Proteção', 'Kits'];
+  const categories = ['Todos', 'Cuidados Faciais', 'Corpo', 'Cabelo', 'Kits'];
   
   const filteredProducts = products.filter(product => {
     const matchesCategory = selectedCategory === 'Todos' || product.category === selectedCategory;

@@ -46,7 +46,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="#" className="text-beauty-cream hover:text-white transition-colors">Cuidados Faciais</a></li>
               <li><a href="#" className="text-beauty-cream hover:text-white transition-colors">Corpo</a></li>
-              <li><a href="#" className="text-beauty-cream hover:text-white transition-colors">Proteção Solar</a></li>
+              <li><a href="#" className="text-beauty-cream hover:text-white transition-colors">Shampoos e Condicionador</a></li>
               <li><a href="#" className="text-beauty-cream hover:text-white transition-colors">Kits Especiais</a></li>
             </ul>
           </div>
@@ -55,17 +55,17 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contato</h4>
             <div className="space-y-2 text-beauty-cream">
-              <p>📍 Rua da Beleza, 123</p>
-              <p>São Paulo - SP</p>
-              <p>📞 (11) 99999-9999</p>
-              <p>✉️ contato@granliss.com</p>
+              <p>📍 R. Antonio Bernardes Pinto, 4671</p>
+              <p>Vila Chico Julio - Franca SP</p>
+              <p>📞 (16) 98809-9466</p>
+              <p>✉️ granliss.grandha@gmail.com</p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-beauty-medium mt-12 pt-8 text-center">
           <p className="text-beauty-cream">
-            © 2024 Granliss. Todos os direitos reservados.
+            © 2025 Granliss. Todos os direitos reservados.
           </p>
         </div>
       </div>

@@ -51,7 +51,7 @@ const ProductsConfig = () => {
   }, [siteData.productsSectionTitle, siteData.productsSectionSubtitle, resetSection]);
 
   const watchedImage = watch('image');
-  const categories = ['Cuidados Faciais', 'Corpo', 'Proteção', 'Kits'];
+  const categories = ['Cuidados Faciais', 'Corpo', 'Cabelo', 'Kits'];
 
   const onSubmitProduct = (data: ProductData) => {
     if (editingProduct) {

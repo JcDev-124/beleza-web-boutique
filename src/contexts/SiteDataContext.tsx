@@ -126,275 +126,275 @@ const initialSiteData: SiteData = {
   products: [
     {
       id: 1,
-      name: "Tônico Capilar - Aloe Vera e Ginseng",
-      description: "Tônico fortificante com aloe vera, ginseng e óleo de alecrim para estimular o crescimento capilar",
-      price: 89.90,
-      image: "/lovable-uploads/1734476d-d512-47e5-b4d5-d5daef93a56d.png",
-      category: "Cuidados Faciais"
+      name: "Acqua Soft 200ml",
+      description: "",
+      price: 105.27,
+      image: "/lovable-uploads/acqua soft.png",
+      category: "Corpo"
     },
     {
       id: 2,
-      name: "Kit Tônico - Tratamento Completo",
-      description: "Kit completo com tônico, baba d'aloe e growing fluid para tratamento capilar intensivo",
-      price: 189.90,
-      image: "/lovable-uploads/160514a8-4fd3-4a9c-8ce9-e9359a66a4dc.png",
-      category: "Kits"
+      name: "Black Pear 250ml",
+      description: "",
+      price: 133.45,
+      image: "lovable-uploads/black pearl.png",
+      category: "Cabelo"
     },
     {
       id: 3,
-      name: "Touch Energy Shampoo",
-      description: "Shampoo energizante com guaraná, gengibre e óleo de laranja doce para cabelos sem vida",
-      price: 67.90,
-      image: "/lovable-uploads/649a9702-18f6-4a54-99c0-0b13005a770c.png",
+      name: "Body Seduction 200ml",
+      description: "",
+      price: 140.86,
+      image: "/lovable-uploads/body seduction.png",
       category: "Corpo"
     },
     {
       id: 4,
-      name: "Fito Capillus Olive Shampoo",
-      description: "Shampoo profissional para limpeza e controle da microbiota do couro cabeludo",
-      price: 78.90,
-      image: "/lovable-uploads/6a2b4f9a-d8f5-4c18-b0c5-efba2ae6fdc4.png",
-      category: "Cuidados Faciais"
+      name: "Coacearvado Ultra Resist 120g",
+      description: "",
+      price: 114.91,
+      image: "/lovable-uploads/coacervado.png",
+      category: "Cabelo"
     },
     {
       id: 5,
-      name: "Refresh Leave-On - Calêndula e Lavanda",
-      description: "Leave-on com calêndula, hortelã e óleo de lavanda francesa para hidratação e proteção",
-      price: 45.90,
-      image: "/lovable-uploads/f901d1ce-7630-4e0b-a40b-60c0c7af5e6b.png",
-      category: "Proteção"
+      name: "Dry Confort 130ml",
+      description: "",
+      price: 88.96,
+      image: "/lovable-uploads/dry 130.png",
+      category: "Cabelo"
     },
     {
       id: 6,
-      name: "Refresh Conditioner",
-      description: "Condicionador com calêndula, hortelã e óleo de lavanda francesa para nutrição profunda",
-      price: 56.90,
-      image: "/lovable-uploads/7347c515-30f4-4599-83c7-4c42603b0c24.png",
-      category: "Corpo"
+      name: "Condicionador Dry Confort 240ml",
+      description: "",
+      price: 95.01,
+      image: "/lovable-uploads/dry 240.png",
+      category: "Cabelo"
     },
     {
       id: 7,
-      name: "Refresh Shampoo - Lavanda Francesa",
-      description: "Shampoo com calêndula, hortelã e óleo de lavanda francesa para limpeza suave",
-      price: 52.90,
-      image: "/lovable-uploads/02f1bc28-de3d-4c3e-8ace-53a2e22f5e8e.png",
-      category: "Cuidados Faciais"
+      name: "Shampoo Dry Confort 300ml",
+      description: "",
+      price: 102.99,
+      image: "/lovable-uploads/dry 300.png",
+      category: "Cabelo"
     },
     {
       id: 8,
-      name: "Kit Refresh Completo",
+      name: "Kit Dry Completo",
       description: "Kit completo Refresh com shampoo, condicionador e leave-on para cuidado total",
-      price: 139.90,
-      image: "/lovable-uploads/3b895065-02f6-4c18-b911-b9b21b61aa92.png",
+      price: 286.96,
+      image: "/lovable-uploads/dry confort - kit completo.png",
       category: "Kits"
     },
     {
       id: 9,
-      name: "Tônico Growing Fluid",
-      description: "Fluido estimulante com aloe vera, ginseng e óleo de alecrim para crescimento capilar",
-      price: 67.90,
-      image: "/lovable-uploads/cf29d782-f374-4c5b-b2a5-ee6690fe98e6.png",
-      category: "Proteção"
+      name: "Elixir Scalp 300g",
+      description: "",
+      price: 175.51,
+      image: "/lovable-uploads/elixir scalp 300g.png",
+      category: "Cabelo"
     },
     {
       id: 10,
-      name: "Tônico Baba D'Aloe",
-      description: "Tratamento intensivo com baba d'aloe para couro cabeludo sensível e ressecado",
-      price: 74.90,
-      image: "/lovable-uploads/fb8211bd-e161-46b0-a1bf-1aec97991072.png",
-      category: "Corpo"
+      name: "Condicionador Eucalyptus Balm 240g",
+      description: "",
+      price: 129.82,
+      image: "/lovable-uploads/eucalyptus balm cond 240.png",
+      category: "Cabelo"
     },
     {
       id: 11,
-      name: "Flowers Shampoo - Girassol e Camomila",
-      description: "Shampoo com girassol, camomila e óleo de palmarosa para cabelos naturais",
-      price: 62.90,
-      image: "/lovable-uploads/96014bed-aa04-48f2-a5ef-8ca257bfda7a.png",
-      category: "Cuidados Faciais"
+      name: "Shampoo Eucalyptus Balm 250ml",
+      description: "",
+      price: 122.57,
+      image: "/lovable-uploads/eucalyptus shampoo 250.png",
+      category: "Cabelo"
     },
     {
       id: 12,
-      name: "Kit Flowers Completo",
-      description: "Kit completo Flowers com shampoo, condicionador e leave-on para tratamento natural",
-      price: 155.90,
-      image: "/lovable-uploads/dce20d50-5a53-4241-a0a8-c114c9544b2a.png",
-      category: "Kits"
+      name: "Shampoo Fine Herbal 250ml",
+      description: "",
+      price: 112.41,
+      image: "/lovable-uploads/Fine herbal Shampoo 250.png",
+      category: "Cabelo"
     },
     {
       id: 13,
-      name: "Fito Capillus Fluid Tonic Repair",
-      description: "Tônico reparador com tecnologia avançada para estimular crescimento e fortalecer fios",
-      price: 95.90,
-      image: "/lovable-uploads/1ffe5e5b-620f-47e7-ad62-3d954946d795.png",
-      category: "Proteção"
+      name: "Flowers Leave On 120g",
+      description: "",
+      price: 88.96,
+      image: "/lovable-uploads/flowers 120.png",
+      category: "Cabelo"
     },
     {
       id: 14,
-      name: "Kit Fito Capillus Profissional",
-      description: "Kit profissional completo para terapia capilar com todos os produtos da linha",
-      price: 289.90,
-      image: "/lovable-uploads/0a2339a4-d5fe-48fc-a21f-92c2145e8508.png",
-      category: "Kits"
+      name: "Flowers Condicionador 240g",
+      description: "",
+      price: 128.99,
+      image: "/lovable-uploads/flowers 240.png",
+      category: "Cabelo"
     },
     {
       id: 15,
-      name: "Urbano SPA Magma Power Growth",
-      description: "Sérum concentrado com fatores de crescimento para biomodulação do folículo capilar",
-      price: 127.90,
-      image: "/lovable-uploads/eae98540-4676-4550-8b49-6e4566fc16f7.png",
-      category: "Proteção"
+      name: "Flowers Shampoo 300ml",
+      description: "",
+      price: 102.99,
+      image: "/lovable-uploads/flowers 300.png",
+      category: "Cabelo"
     },
     {
       id: 16,
-      name: "Fito Capillus Olive Oil Conditioner",
-      description: "Condicionador com óleo de oliva para equilibrar microbiota e recondicionar fios",
-      price: 69.90,
-      image: "/lovable-uploads/58592ee8-2741-4169-b10c-45c4eb9ad71c.png",
-      category: "Corpo"
+      name: "Kit Flowers Completo",
+      description: "",
+      price: 286.96,
+      image: "/lovable-uploads/flowers kit.png",
+      category: "Cabelo"
     },
     {
       id: 17,
-      name: "Fito Capillus Time Massage Cream",
-      description: "Creme para massagem capilar que estimula conforto e equilíbrio da microbiota",
-      price: 85.90,
-      image: "/lovable-uploads/164410ce-d806-497e-bd94-483561460ee7.png",
-      category: "Corpo"
+      name: "Flowers Tônico Reparador 120ml",
+      description: "",
+      price: 101.56,
+      image: "/lovable-uploads/Fluid flowers 120.png",
+      category: "Cabelo"
     },
     {
       id: 18,
-      name: "Touch Energy Leave-On",
-      description: "Leave-on energizante com guaraná, gengibre e óleo de laranja doce",
-      price: 48.90,
-      image: "/lovable-uploads/20b1cee8-fb77-42fa-b4c5-abb6896e3cf2.png",
-      category: "Proteção"
+      name: "Kit Olive",
+      description: "",
+      price: 455.48,
+      image: "/lovable-uploads/Kit olive.png",
+      category: "Kit"
     },
     {
       id: 19,
-      name: "Touch Energy Power Gel",
-      description: "Gel energizante para modelagem com guaraná, gengibre e óleo de laranja doce",
-      price: 42.90,
-      image: "/lovable-uploads/cc40388a-a152-4e76-88ae-e389a12951d2.png",
-      category: "Corpo"
+      name: "Magma Power 30ml",
+      description: "",
+      price: 161.24,
+      image: "/lovable-uploads/Magma power novo 30ml.png",
+      category: "Cabelo"
     },
     {
       id: 20,
-      name: "Kit Touch Energy Completo",
-      description: "Kit completo Touch Energy com shampoo, power gel e leave-on energizante",
-      price: 145.90,
-      image: "/lovable-uploads/1c37744d-bc56-49fa-bc4c-97af508f3930.png",
-      category: "Kits"
+      name: "Condicionador Olive 240g",
+      description: "",
+      price: 128.99,
+      image: "/lovable-uploads/Olive oil conditioner 240.png",
+      category: "Cabelo"
     },
     {
       id: 21,
-      name: "Dry Confort Liquid Control",
-      description: "Controle líquido com arnica montana, capim limão e OE de melaleuca para cabelos ressecados",
-      price: 72.90,
-      image: "/lovable-uploads/70ceb137-e1f6-40d6-be6e-60463d92db34.png",
-      category: "Proteção"
+      name: "Creme Olive 300g",
+      description: "",
+      price: 180.89,
+      image: "/lovable-uploads/Olive oil cream 300.png",
+      category: "Cabelo"
     },
     {
       id: 22,
-      name: "Dry Confort Conditioner",
-      description: "Condicionador nutritivo com arnica montana, capim limão e óleo de melaleuca",
-      price: 68.90,
-      image: "/lovable-uploads/e774f128-4f5e-43bd-8cbb-c423aa316140.png",
+      name: "Olive Shampoo 250ml",
+      description: "",
+      price: 116.04,
+      image: "/lovable-uploads/Olive shampoo 250.png",
       category: "Corpo"
     },
     {
       id: 23,
-      name: "Dry Confort Shampoo",
-      description: "Shampoo hidratante com arnica montana, capim limão e óleo de melaleuca",
-      price: 64.90,
-      image: "/lovable-uploads/cf8ce020-afd8-4ce8-afb9-fbf39b19d3f1.png",
-      category: "Cuidados Faciais"
+      name: "Refresh Leave on 120g",
+      description: "",
+      price: 88.96,
+      image: "/lovable-uploads/refresh 120.png",
+      category: "Cabelo"
     },
     {
       id: 24,
-      name: "Kit Dry Confort Completo",
-      description: "Kit completo Dry Confort com shampoo, condicionador e liquid control",
-      price: 189.90,
-      image: "/lovable-uploads/93ef42ed-dde8-4e77-8d02-f7fddc22df40.png",
-      category: "Kits"
+      name: "Condicionador Refresh 240g",
+      description: "",
+      price: 95.01,
+      image: "/lovable-uploads/refresh 240.png",
+      category: "Cabelo"
     },
     {
       id: 25,
-      name: "Fito Capillus Hair & Scalp Massage",
-      description: "Elixir de massagem com ação calmante e antioxidante para revitalização capilar",
-      price: 98.90,
-      image: "/lovable-uploads/993b4239-f407-45dd-9bf4-63cdb0fb638d.png",
-      category: "Corpo"
+      name: "Shampoo Refresh 300ml",
+      description: "",
+      price: 102.99,
+      image: "/lovable-uploads/refresh 300.png",
+      category: "Cabelo"
     },
     {
       id: 26,
-      name: "Fito Capillus Eucalyptus Balm Conditioner",
-      description: "Condicionador bálsamo com eucalipto para prevenção do estresse e controle da microbiota",
-      price: 76.90,
-      image: "/lovable-uploads/73625bde-a712-4a62-bc58-56ee94569cef.png",
-      category: "Corpo"
+      name: "Kit Completo Refresh",
+      description: "",
+      price: 286.96,
+      image: "/lovable-uploads/refresh kit.png",
+      category: "Cabelo"
     },
     {
       id: 27,
-      name: "Fito Capillus Eucalyptus Shampoo",
-      description: "Shampoo com eucalipto para prevenção do estresse e controle da microbiota do couro cabeludo",
-      price: 71.90,
-      image: "/lovable-uploads/bda81fc8-b49f-443c-875a-68c63d6fe765.png",
-      category: "Cuidados Faciais"
+      name: "Tonific Growing 130ml",
+      description: "",
+      price: 88.96,
+      image: "/lovable-uploads/tonific 130.png",
+      category: "Cabelo"
     },
     {
       id: 28,
-      name: "Fito Capillus Fine Herbal Shampoo",
-      description: "Shampoo herbal para limpeza e desobstrução do sistema capilar",
-      price: 69.90,
-      image: "/lovable-uploads/15659dd5-d0fc-43fc-ae3e-ab62d63b3ed2.png",
-      category: "Cuidados Faciais"
+      name: "Tonific Baba D'Aloe 240g",
+      description: "",
+      price: 97.12,
+      image: "/lovable-uploads/tonific 240.png",
+      category: "Cabelo"
     },
     {
       id: 29,
-      name: "Flowers Leave-On - Girassol e Palmarosa",
-      description: "Leave-on nutritivo com girassol, camomila e óleo de palmarosa para cabelos naturais",
-      price: 54.90,
-      image: "/lovable-uploads/3845a338-a09e-48d5-b1ba-dc6154e0ef4a.png",
-      category: "Proteção"
+      name: "Shampo Tonific 300ml",
+      description: "",
+      price: 102.99,
+      image: "/lovable-uploads/tonific 300.png",
+      category: "Cabelo"
     },
     {
       id: 30,
-      name: "Flowers Conditioner - Camomila e Palmarosa",
-      description: "Condicionador natural com girassol, camomila e óleo de palmarosa para nutrição profunda",
-      price: 59.90,
-      image: "/lovable-uploads/7f74480d-a806-4f31-947d-486319b2411d.png",
-      category: "Corpo"
+      name: "Kit Completo Tonific",
+      description: "",
+      price: 288.96,
+      image: "/lovable-uploads/tonific kit.png",
+      category: "Cabelo"
     },
     {
       id: 31,
-      name: "Body Seduction - Óleo Perfumado Corporal",
-      description: "Óleo perfumado para textura corporal da linha Celebration com fragrância sedutora",
-      price: 89.90,
-      image: "/lovable-uploads/39c5d260-14fa-4015-b1e3-f9cb89b0f2a6.png",
-      category: "Corpo"
+      name: "Touch Leave on",
+      description: "",
+      price: 88.96,
+      image: "/lovable-uploads/touch 120.png",
+      category: "Cabelo"
     },
     {
       id: 32,
-      name: "Urbano SPA Coacervado Ultra Resist",
-      description: "Hair therapy profissional para reparação extrema e redensificação da fibra capilar",
-      price: 135.90,
-      image: "/lovable-uploads/e7c6a99d-a431-4f18-9e04-08197228b471.png",
-      category: "Proteção"
+      name: "Touch Energy Power Gel 240g",
+      description: "",
+      price: 95.01,
+      image: "/lovable-uploads/touch 240.png",
+      category: "Cabelo"
     },
     {
       id: 33,
-      name: "MixOil Acqua Soft - Coconut & Argan",
-      description: "Água de coco refrescante para o corpo com toque de óleo essencial de lavanda francesa",
-      price: 78.90,
-      image: "/lovable-uploads/766f2005-a94a-4acb-ac9d-c872597cf2be.png",
-      category: "Corpo"
+      name: "Kit Completo Touch",
+      description: "",
+      price: 286.96,
+      image: "/lovable-uploads/touch kit.png",
+      category: "Kit"
     },
     {
       id: 34,
-      name: "Urbano SPA Black Pearl Shampoo",
-      description: "Shampoo profissional para preservação e renovação da fibra capilar com pérola negra",
-      price: 98.90,
+      name: "Shampoo Touch 300ml",
+      description: "",
+      price: 102.99,
       image: "/lovable-uploads/2a6380e5-5221-42a4-b653-c2347128cc1e.png",
-      category: "Cuidados Faciais"
+      category: "Cabelo"
     }
   ],
   course: {
@@ -402,15 +402,15 @@ const initialSiteData: SiteData = {
     title: "Formação Básica em Terapia Capilar",
     description: "Seja um terapeuta capilar certificado pela Academia Brasileira de Tricologia.",
     fullDescription: "Este curso abrangente oferece uma formação completa em terapia capilar, cobrindo desde técnicas básicas até procedimentos avançados. Você aprenderá sobre anatomia capilar, tipos de cabelo, protocolos de tratamento e as mais modernas tecnologias do mercado para tratamento de problemas capilares.",
-    image: "/lovable-uploads/28cc1770-fb13-41dc-a343-1c9abf427939.png",
+    image: "/lovable-uploads/curso.jpg",
     duration: "40 horas",
     students: "150+",
     rating: 4.9,
-    price: "R$ 1.299",
-    installments: "12x de R$ 108,25 sem juros",
-    instructor: "Dra. Marina Silva",
-    instructorImage: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-    level: "Básico a Intermediário",
+    price: "R$ 3.200",
+    installments: "10x de R$ 320,00 sem juros",
+    instructor: "Luciano",
+    instructorImage: "/lovable-uploads/luciano.jpg",
+    level: "Básico a Avançado",
     schedule: ["Segunda: 14:00 - 18:00", "Quarta: 14:00 - 18:00", "Sexta: 14:00 - 18:00"],
     whatYouLearn: [
       "Anatomia e fisiologia do couro cabeludo",
