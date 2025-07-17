@@ -107,7 +107,7 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
               </div>
               
               <CardHeader className="flex-grow pb-2">
-                <CardTitle className="text-beauty-dark group-hover:text-beauty-medium transition-colors text-lg font-semibold leading-tight">
+                <CardTitle className="text-beauty-dark group-hover:text-beauty-medium transition-colors text-lg font-semibold leading-tight text-center">
                   {product.name}
                 </CardTitle>
               </CardHeader>
