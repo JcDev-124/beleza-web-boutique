@@ -66,7 +66,7 @@ const InstagramSection = () => {
           {instagramPosts.map((post, index) => (
             <div
               key={post.id}
-              className="relative group cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+              className="relative group cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 aspect-square"
               onClick={() => handlePostClick(post.id)}
               style={{
                 animationDelay: `${index * 100}ms`
@@ -75,7 +75,7 @@ const InstagramSection = () => {
               <img
                 src={post.image}
                 alt={post.caption}
-                className="w-full h-48 md:h-56 object-cover group-hover:scale-110 transition-transform duration-300"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
               />
               
               {/* Overlay */}

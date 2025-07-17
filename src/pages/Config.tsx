@@ -3,12 +3,13 @@ import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Settings, Image, Type, ShoppingBag, BookOpen } from 'lucide-react';
+import { ArrowLeft, Settings, Image, Type, ShoppingBag, BookOpen, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import HeroConfig from '@/components/config/HeroConfig';
 import AboutConfig from '@/components/config/AboutConfig';
 import ProductsConfig from '@/components/config/ProductsConfig';
 import CourseConfig from '@/components/config/CourseConfig';
+import InstagramConfig from '@/components/config/InstagramConfig';
 import { useToast } from '@/hooks/use-toast';
 
 const Config = () => {
@@ -65,7 +66,7 @@ const Config = () => {
 
         {/* Configuration Tabs */}
         <Tabs defaultValue="hero" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-4 lg:grid-cols-4">
+          <TabsList className="grid w-full grid-cols-5 lg:grid-cols-5">
             <TabsTrigger value="hero" className="flex items-center space-x-2">
               <Image className="w-4 h-4" />
               <span className="hidden sm:inline">Hero</span>
@@ -81,6 +82,10 @@ const Config = () => {
             <TabsTrigger value="course" className="flex items-center space-x-2">
               <BookOpen className="w-4 h-4" />
               <span className="hidden sm:inline">Curso</span>
+            </TabsTrigger>
+            <TabsTrigger value="instagram" className="flex items-center space-x-2">
+              <Instagram className="w-4 h-4" />
+              <span className="hidden sm:inline">Instagram</span>
             </TabsTrigger>
           </TabsList>
 
@@ -136,6 +141,20 @@ const Config = () => {
               </CardHeader>
               <CardContent>
                 <CourseConfig />
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="instagram" className="space-y-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>Configuração do Instagram</CardTitle>
+                <CardDescription>
+                  Gerencie os posts e configurações do Instagram
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <InstagramConfig />
               </CardContent>
             </Card>
           </TabsContent>
