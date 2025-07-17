@@ -2,33 +2,33 @@
 const instagramPosts = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    caption: "Rotina de cuidados matinal ✨"
+    image: "/lovable-uploads/insta1.jpg",
+    caption: "Você sabia?"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    caption: "Pele radiante com nossos produtos 💫"
+    image: "/lovable-uploads/insta2.jpg",
+    caption: "Você sabia?"
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    caption: "Novos lançamentos chegando! 🌿"
+    image: "/lovable-uploads/insta3.jpg",
+    caption: "Você sabia?"
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    caption: "Ingredientes naturais fazem a diferença 🌱"
+    image: "/lovable-uploads/insta4.jpg",
+    caption: "Você sabia?"
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    caption: "Autoestima em alta! 💪"
+    image: "/lovable-uploads/insta5.jpg",
+    caption: "Você sabia?"
   },
   {
     id: 6,
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    caption: "Momento de autocuidado 🛁"
+    image: "/lovable-uploads/insta6.jpg",
+    caption: "Você sabia?"
   }
 ];
 

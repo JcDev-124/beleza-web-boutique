@@ -85,13 +85,13 @@ const initialSiteData: SiteData = {
     subtitle: "Produtos premium de beleza e cuidados pessoais que realçam sua beleza única e natural",
     buttonText: "Descobrir Produtos",
     images: {
-      image1: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image1: "/lovable-uploads/faciais 1.jpg",
       image1Title: "Cuidados Faciais",
       image1Subtitle: "Produtos premium para sua pele",
-      image2: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image2: "/lovable-uploads/corporais 1.jpg",
       image2Title: "Tratamentos Corporais",
       image2Subtitle: "Beleza de corpo inteiro",
-      image3: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image3: "/lovable-uploads/cosmeticos naturais 1.jpg",
       image3Title: "Cosméticos Naturais",
       image3Subtitle: "Ingredientes 100% naturais"
     }
@@ -100,9 +100,9 @@ const initialSiteData: SiteData = {
     title: "Sobre a Granliss",
     description1: "Há mais de 5 anos, a Granliss tem sido referência em beleza e bem-estar, oferecendo produtos de alta qualidade e tratamentos personalizados para realçar a beleza única de cada pessoa.",
     description2: "Nossa missão é proporcionar uma experiência completa de cuidados pessoais, combinando ingredientes naturais premium com as mais modernas técnicas de beleza.",
-    mainImage: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    image1: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    image2: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    mainImage: "/lovable-uploads/faciais 2.jpg",
+    image1: "/lovable-uploads/corporais 2.jpg",
+    image2: "/lovable-uploads/corporais 3.jpg",
     stats: {
       clients: "1000+",
       products: "50+",
