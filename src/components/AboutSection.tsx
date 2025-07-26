@@ -1,5 +1,6 @@
 
 import { useSiteData } from '@/contexts/SiteDataContext';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 
 const AboutSection = () => {
   const { siteData } = useSiteData();
@@ -12,25 +13,28 @@ const AboutSection = () => {
           {/* Images */}
           <div className="space-y-8">
             <div className="relative">
-              <img
+              <OptimizedImage
                 src={about.mainImage}
                 alt="Instituto de Beleza"
                 className="w-full h-96 object-cover rounded-2xl shadow-xl"
+                skeletonClassName="rounded-2xl"
               />
               <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-beauty-medium rounded-2xl flex items-center justify-center shadow-lg">
                 <span className="text-white text-4xl font-bold">{about.stats.experience}</span>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <img
+              <OptimizedImage
                 src={about.image1}
                 alt="Produtos naturais"
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
+                skeletonClassName="rounded-xl"
               />
-              <img
+              <OptimizedImage
                 src={about.image2}
                 alt="Tratamentos de beleza"
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
+                skeletonClassName="rounded-xl"
               />
             </div>
           </div>

@@ -1,5 +1,6 @@
 
 import { useSiteData } from '@/contexts/SiteDataContext';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 
 const HeroSection = () => {
   const { siteData } = useSiteData();
@@ -26,10 +27,12 @@ const HeroSection = () => {
         {/* Hero Images Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-scale-in">
           <div className="relative group overflow-hidden rounded-2xl shadow-lg">
-            <img
+            <OptimizedImage
               src={hero.images.image1}
               alt={hero.images.image1Title}
               className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+              skeletonClassName="rounded-2xl"
+              priority={true}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-beauty-dark/50 to-transparent"></div>
             <div className="absolute bottom-4 left-4 text-white">
@@ -39,10 +42,12 @@ const HeroSection = () => {
           </div>
 
           <div className="relative group overflow-hidden rounded-2xl shadow-lg">
-            <img
+            <OptimizedImage
               src={hero.images.image2}
               alt={hero.images.image2Title}
               className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+              skeletonClassName="rounded-2xl"
+              priority={true}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-beauty-dark/50 to-transparent"></div>
             <div className="absolute bottom-4 left-4 text-white">
@@ -52,10 +57,12 @@ const HeroSection = () => {
           </div>
 
           <div className="relative group overflow-hidden rounded-2xl shadow-lg">
-            <img
+            <OptimizedImage
               src={hero.images.image3}
               alt={hero.images.image3Title}
               className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+              skeletonClassName="rounded-2xl"
+              priority={true}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-beauty-dark/50 to-transparent"></div>
             <div className="absolute bottom-4 left-4 text-white">

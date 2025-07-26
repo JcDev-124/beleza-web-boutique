@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Plus, Search, ChevronDown, ChevronUp } from 'lucide-react';
 import { useSiteData } from '@/contexts/SiteDataContext';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 
 export interface Product {
   id: number;
@@ -93,10 +94,11 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
             >
               <div className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white p-4">
                 <div className="aspect-[3/4] relative">
-                  <img
+                  <OptimizedImage
                     src={product.image}
                     alt={product.name}
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-lg"
+                    skeletonClassName="rounded-lg"
                   />
                 </div>
                 <div className="absolute top-6 right-6">

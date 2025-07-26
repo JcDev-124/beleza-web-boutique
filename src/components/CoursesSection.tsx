@@ -3,6 +3,7 @@ import { ArrowRight, Clock, Users, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { useSiteData } from '@/contexts/SiteDataContext';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 
 const CoursesSection = () => {
   const { siteData } = useSiteData();
@@ -25,10 +26,11 @@ const CoursesSection = () => {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <img
+              <OptimizedImage
                 src={course.image}
                 alt={course.title}
                 className="w-full h-96 object-contain rounded-2xl shadow-xl bg-white"
+                skeletonClassName="rounded-2xl"
               />
               <div className="absolute top-6 left-6 bg-beauty-dark text-white px-4 py-2 rounded-full text-sm font-semibold">
                 Curso em Destaque

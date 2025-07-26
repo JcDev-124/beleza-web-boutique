@@ -2,6 +2,7 @@
 import { X, Trash2, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Product } from './ProductsSection';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 
 interface CartItem extends Product {
   quantity: number;
@@ -62,10 +63,11 @@ const CartModal = ({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem 
             <div className="space-y-4">
               {cartItems.map((item) => (
                 <div key={item.id} className="flex items-center space-x-4 p-4 border border-beauty-light rounded-lg">
-                  <img
+                  <OptimizedImage
                     src={item.image}
                     alt={item.name}
                     className="w-16 h-16 object-cover rounded-lg"
+                    skeletonClassName="rounded-lg"
                   />
                   <div className="flex-1">
                     <h3 className="font-semibold text-beauty-dark">{item.name}</h3>

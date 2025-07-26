@@ -103,13 +103,129 @@ src/
 
 Quando o cliente finaliza o pedido, ele é redirecionado automaticamente para o WhatsApp com a lista de produtos selecionados formatada.
 
-## 🔗 Deploy
+## 🔗 Deploy no seu servidor
 
-O projeto está configurado para deploy automático via Lovable. Para fazer deploy em outras plataformas:
+### Opção 1: Build estático (Recomendado)
 
-1. Execute `npm run build` para gerar os arquivos de produção
-2. Os arquivos estarão na pasta `dist/`
-3. Faça upload da pasta `dist/` para seu provedor de hospedagem
+Para hospedar o projeto em seu próprio servidor:
+
+1. **Gere os arquivos de produção**
+   ```bash
+   npm run build
+   ```
+
+2. **Configure seu servidor web**
+   - Os arquivos estarão na pasta `dist/`
+   - Configure seu servidor (Apache, Nginx, etc.) para servir os arquivos da pasta `dist/`
+   - Configure redirecionamento para `index.html` para suporte ao React Router
+
+3. **Exemplo de configuração Nginx**
+   ```nginx
+   server {
+       listen 80;
+       server_name seudominio.com;
+       root /caminho/para/sua/pasta/dist;
+       index index.html;
+
+       location / {
+           try_files $uri $uri/ /index.html;
+       }
+
+       # Otimização para assets estáticos
+       location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+           expires 1y;
+           add_header Cache-Control "public, immutable";
+       }
+   }
+   ```
+
+4. **Exemplo de configuração Apache (.htaccess)**
+   ```apache
+   RewriteEngine On
+   RewriteBase /
+
+   # Handle client-side routing
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteRule . /index.html [L]
+
+   # Otimização de cache
+   <IfModule mod_expires.c>
+       ExpiresActive On
+       ExpiresByType image/* "access plus 1 year"
+       ExpiresByType text/css "access plus 1 year"
+       ExpiresByType application/javascript "access plus 1 year"
+   </IfModule>
+   ```
+
+### Opção 2: Usando PM2 e Node.js
+
+Se preferir usar um servidor Node.js:
+
+1. **Instale PM2 globalmente**
+   ```bash
+   npm install -g pm2
+   ```
+
+2. **Crie um arquivo `ecosystem.config.js`**
+   ```javascript
+   module.exports = {
+     apps: [{
+       name: 'granliss-site',
+       script: 'npx',
+       args: 'serve -s dist -l 3000',
+       instances: 1,
+       autorestart: true,
+       watch: false,
+       max_memory_restart: '1G',
+       env: {
+         NODE_ENV: 'production'
+       }
+     }]
+   }
+   ```
+
+3. **Execute com PM2**
+   ```bash
+   npm run build
+   pm2 start ecosystem.config.js
+   pm2 save
+   pm2 startup
+   ```
+
+### Opção 3: Docker
+
+Para containerizar a aplicação:
+
+1. **Crie um `Dockerfile`**
+   ```dockerfile
+   FROM node:18-alpine as build
+   WORKDIR /app
+   COPY package*.json ./
+   RUN npm install
+   COPY . .
+   RUN npm run build
+
+   FROM nginx:alpine
+   COPY --from=build /app/dist /usr/share/nginx/html
+   COPY nginx.conf /etc/nginx/nginx.conf
+   EXPOSE 80
+   CMD ["nginx", "-g", "daemon off;"]
+   ```
+
+2. **Execute o build e deploy**
+   ```bash
+   docker build -t granliss-site .
+   docker run -d -p 80:80 granliss-site
+   ```
+
+### Otimizações importantes para produção
+
+- ✅ **Compressão Gzip**: Habilitada automaticamente pelo Vite
+- ✅ **Lazy loading de imagens**: Implementado com componente OptimizedImage
+- ✅ **Cache de assets**: Configure no seu servidor web
+- ✅ **CDN**: Considere usar um CDN para servir assets estáticos
+- ✅ **HTTPS**: Sempre use HTTPS em produção
 
 ## 🐛 Solução de problemas
 

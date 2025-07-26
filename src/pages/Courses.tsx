@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useSiteData } from '@/contexts/SiteDataContext';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 
 const Courses = () => {
   const { siteData } = useSiteData();
@@ -41,10 +42,12 @@ const Courses = () => {
           {/* Course Hero */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
-              <img
+              <OptimizedImage
                 src={course.image}
                 alt={course.title}
                 className="w-full h-96 object-contain rounded-2xl shadow-xl bg-white"
+                skeletonClassName="rounded-2xl"
+                priority={true}
               />
             </div>
             
@@ -128,11 +131,12 @@ const Courses = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center space-x-4">
-                    <img
-                      src={course.instructorImage}
-                      alt={course.instructor}
-                      className="w-16 h-16 rounded-full object-cover"
-                    />
+                      <OptimizedImage
+                        src={course.instructorImage}
+                        alt={course.instructor}
+                        className="w-16 h-16 rounded-full object-cover"
+                        skeletonClassName="rounded-full"
+                      />
                     <div>
                       <h4 className="font-semibold text-beauty-dark">{course.instructor}</h4>
                       <p className="text-sm text-beauty-medium">Especialista em Tricologia</p>
