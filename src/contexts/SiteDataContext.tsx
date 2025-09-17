@@ -87,10 +87,10 @@ const initialSiteData: SiteData = {
     images: {
       image1: "/lovable-uploads/faciais 1.jpg",
       image1Title: "Terapia Capilar",
-      image1Subtitle: "Produtos premium para sua pele",
+      image1Subtitle: "Produtos premium para seu cuidado",
       image2: "/lovable-uploads/corporais 1.jpg",
       image2Title: "Tratamento Capilar",
-      image2Subtitle: "Beleza de corpo inteiro",
+      image2Subtitle: "Os produtos perfeitos para seu cabelo",
       image3: "/lovable-uploads/cosmeticos naturais 1.jpg",
       image3Title: "Cosméticos Naturais",
       image3Subtitle: "Ingredientes 100% naturais"
