@@ -26,7 +26,10 @@ const HeroSection = () => {
 
         {/* Hero Images Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-scale-in">
-          <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+          <div 
+            className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+            onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             <OptimizedImage
               src={hero.images.image1}
               alt={hero.images.image1Title}
@@ -41,7 +44,10 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+          <div 
+            className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+            onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             <OptimizedImage
               src={hero.images.image2}
               alt={hero.images.image2Title}
@@ -56,7 +62,10 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+          <div 
+            className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+            onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             <OptimizedImage
               src={hero.images.image3}
               alt={hero.images.image3Title}

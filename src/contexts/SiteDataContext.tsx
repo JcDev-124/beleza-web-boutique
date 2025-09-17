@@ -86,10 +86,10 @@ const initialSiteData: SiteData = {
     buttonText: "Descobrir Produtos",
     images: {
       image1: "/lovable-uploads/faciais 1.jpg",
-      image1Title: "Cuidados Faciais",
+      image1Title: "Terapia Capilar",
       image1Subtitle: "Produtos premium para sua pele",
       image2: "/lovable-uploads/corporais 1.jpg",
-      image2Title: "Tratamentos Corporais",
+      image2Title: "Terapia Capilar",
       image2Subtitle: "Beleza de corpo inteiro",
       image3: "/lovable-uploads/cosmeticos naturais 1.jpg",
       image3Title: "Cosméticos Naturais",
