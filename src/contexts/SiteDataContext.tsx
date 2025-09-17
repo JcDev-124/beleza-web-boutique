@@ -130,7 +130,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 105.27,
       image: "/lovable-uploads/acqua soft.png",
-      category: "Cuidados Faciais"
+      category: "Terapia Capilar"
     },
     {
       id: 2,
@@ -138,7 +138,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 133.45,
       image: "lovable-uploads/black pearl.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 3,
@@ -146,7 +146,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 140.86,
       image: "/lovable-uploads/body seduction.png",
-      category: "Cuidados Faciais"
+      category: "Terapia Capilar"
     },
     {
       id: 4,
@@ -162,7 +162,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 88.96,
       image: "/lovable-uploads/dry 130.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 6,
@@ -170,7 +170,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 95.01,
       image: "/lovable-uploads/dry 240.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 7,
@@ -178,7 +178,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 102.99,
       image: "/lovable-uploads/dry 300.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 8,
@@ -202,7 +202,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 129.82,
       image: "/lovable-uploads/eucalyptus balm cond 240.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 11,
@@ -210,7 +210,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 122.57,
       image: "/lovable-uploads/eucalyptus shampoo 250.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 12,
@@ -218,7 +218,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 112.41,
       image: "/lovable-uploads/Fine herbal Shampoo 250.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 13,
@@ -226,7 +226,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 88.96,
       image: "/lovable-uploads/flowers 120.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 14,
@@ -234,7 +234,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 128.99,
       image: "/lovable-uploads/flowers 240.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 15,
@@ -242,7 +242,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 102.99,
       image: "/lovable-uploads/flowers 300.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 16,
@@ -282,7 +282,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 128.99,
       image: "/lovable-uploads/Olive oil conditioner 240.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 21,
@@ -290,7 +290,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 180.89,
       image: "/lovable-uploads/Olive oil cream 300.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 22,
@@ -298,7 +298,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 116.04,
       image: "/lovable-uploads/Olive shampoo 250.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 23,
@@ -306,7 +306,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 88.96,
       image: "/lovable-uploads/refresh 120.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 24,
@@ -314,7 +314,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 95.01,
       image: "/lovable-uploads/refresh 240.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 25,
@@ -322,7 +322,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 102.99,
       image: "/lovable-uploads/refresh 300.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 26,
@@ -346,7 +346,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 97.12,
       image: "/lovable-uploads/tonific 240.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 29,
@@ -354,7 +354,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 102.99,
       image: "/lovable-uploads/tonific 300.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 30,
@@ -370,7 +370,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 88.96,
       image: "/lovable-uploads/touch 120.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 32,
@@ -378,7 +378,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 95.01,
       image: "/lovable-uploads/touch 240.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     },
     {
       id: 33,
@@ -394,7 +394,7 @@ const initialSiteData: SiteData = {
       description: "",
       price: 102.99,
       image: "/lovable-uploads/2a6380e5-5221-42a4-b653-c2347128cc1e.png",
-      category: "Tratamento Capilar"
+      category: "Terapia Capilar"
     }
   ],
   course: {
