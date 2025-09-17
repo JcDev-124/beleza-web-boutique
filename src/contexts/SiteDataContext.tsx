@@ -145,7 +145,7 @@ const initialSiteData: SiteData = {
       name: "Body Seduction 120ml",
       description: "",
       price: 140.86,
-      image: "/lovable-uploads/body seduction.png",
+      image: "/lovable-uploads/Body Seduction 120.png",
       category: "Terapia Capilar"
     },
     {
@@ -395,6 +395,14 @@ const initialSiteData: SiteData = {
       price: 102.99,
       image: "/lovable-uploads/2a6380e5-5221-42a4-b653-c2347128cc1e.png",
       category: "Terapia Capilar"
+    },
+    {
+      id: 35,
+      name: "Urbano Spa Black",
+      description: "",
+      price: 409.60,
+      image: "/lovable-uploads/spakit.png",
+      category: "Kits"
     }
   ],
   course: {
