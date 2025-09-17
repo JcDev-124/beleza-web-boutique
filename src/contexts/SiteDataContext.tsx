@@ -142,7 +142,7 @@ const initialSiteData: SiteData = {
     },
     {
       id: 3,
-      name: "Body Seduction 200ml",
+      name: "Body Seduction 120ml",
       description: "",
       price: 140.86,
       image: "/lovable-uploads/body seduction.png",
