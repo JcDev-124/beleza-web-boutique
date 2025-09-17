@@ -114,7 +114,7 @@ Para hospedar o projeto em seu próprio servidor:
    npm run build
    ```
 
-2. **Configure seu servidor web**
+2. **Configure nseu servidor web**
    - Os arquivos estarão na pasta `dist/`
    - Configure seu servidor (Apache, Nginx, etc.) para servir os arquivos da pasta `dist/`
    - Configure redirecionamento para `index.html` para suporte ao React Router
