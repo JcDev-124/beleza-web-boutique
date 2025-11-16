@@ -1,6 +1,6 @@
 
 import { useEffect } from 'react';
-import { CheckCircle2, Clock, Users, Star, Award, Phone, MapPin, Flame } from 'lucide-react';
+import { CheckCircle2, Clock, Users, Star, Award, Phone, MapPin, Flame, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Navbar from '@/components/Navbar';
@@ -27,7 +27,7 @@ const Courses = () => {
       <Navbar cartItemsCount={0} onCartClick={() => {}} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900">
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-gradient-to-br from-beauty-dark via-beauty-medium to-beauty-dark">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00em0wLTEwYzAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0IDEuNzkgNCA0IDQgNC0xLjc5IDQtNHoiLz48L2c+PC9nPjwvc3ZnPg==')]"></div>
         </div>
@@ -41,7 +41,7 @@ const Courses = () => {
             {course.title.split(' ').map((word, index) => (
               <span key={index}>
                 {word === 'ITSe' || word === 'Terapia' || word === 'Capilar' ? (
-                  <span className="text-cyan-300">{word} </span>
+                  <span className="text-beauty-cream">{word} </span>
                 ) : (
                   word + ' '
                 )}
@@ -53,21 +53,16 @@ const Courses = () => {
             {course.fullDescription}
           </p>
           
-          <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl py-6 px-8 inline-block mb-8">
-            <div className="flex items-center justify-center gap-3 text-white text-xl font-semibold">
-              <MapPin className="w-6 h-6" />
-              <span>BRASIL • {course.duration}</span>
-            </div>
+          <div className="flex justify-center mb-8">
+            <Button
+              onClick={handleWhatsAppContact}
+              size="lg"
+              className="bg-beauty-cream hover:bg-white text-beauty-dark font-bold text-lg px-12 py-7 rounded-full shadow-2xl hover:scale-105 transition-all duration-300"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Garanta AGORA a sua vaga!
+            </Button>
           </div>
-          
-          <Button
-            onClick={handleWhatsAppContact}
-            size="lg"
-            className="bg-cyan-400 hover:bg-cyan-500 text-blue-900 font-bold text-lg px-12 py-7 rounded-full shadow-2xl hover:scale-105 transition-all duration-300"
-          >
-            <CheckCircle2 className="w-5 h-5 mr-2" />
-            Garanta AGORA a sua vaga!
-          </Button>
         </div>
       </section>
 
@@ -93,21 +88,21 @@ const Courses = () => {
         </div>
 
         {/* Pricing Card */}
-        <Card className="max-w-lg mx-auto bg-white border-2 border-blue-100 shadow-xl rounded-3xl overflow-hidden mb-16">
+        <Card className="max-w-lg mx-auto bg-white border-2 border-beauty-light shadow-xl rounded-3xl overflow-hidden mb-16">
           <div className="p-8 space-y-6">
             <div className="text-center border-b border-gray-200 pb-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">1º LOTE</h3>
               <div className="flex items-baseline justify-center gap-2">
                 <span className="text-xl text-gray-600">10x</span>
-                <span className="text-blue-600 font-bold text-6xl">{course.price.replace('R$ ', '').split(',')[0]}</span>
-                <span className="text-3xl font-bold text-blue-600 italic">{course.price.includes(',') ? ',00' : ''}</span>
+                <span className="text-beauty-dark font-bold text-6xl">{course.price.replace('R$ ', '').split(',')[0]}</span>
+                <span className="text-3xl font-bold text-beauty-dark italic">{course.price.includes(',') ? ',00' : ''}</span>
                 <span className="text-xl text-gray-600 italic">sem juros!</span>
               </div>
             </div>
 
             <div className="space-y-4">
-              <div className="bg-blue-50 rounded-xl p-4">
-                <p className="text-blue-900 font-bold text-xl text-center">
+              <div className="bg-beauty-light rounded-xl p-4">
+                <p className="text-beauty-dark font-bold text-xl text-center">
                   GARANTA A MELHOR OFERTA!
                 </p>
               </div>
@@ -124,7 +119,7 @@ const Courses = () => {
             <Button
               onClick={handleWhatsAppContact}
               size="lg"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-6 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300"
+              className="w-full bg-beauty-dark hover:bg-beauty-medium text-white font-bold text-lg py-6 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300"
             >
               COMPRAR AGORA
             </Button>
@@ -149,7 +144,7 @@ const Courses = () => {
           {/* Course Stats */}
           <Card className="p-8 shadow-lg rounded-2xl space-y-6">
             <div className="flex items-center gap-3 text-gray-700">
-              <Clock className="w-6 h-6 text-blue-600" />
+              <Clock className="w-6 h-6 text-beauty-dark" />
               <div>
                 <p className="text-sm text-gray-500">Duração</p>
                 <p className="font-semibold">{course.duration}</p>
@@ -157,7 +152,7 @@ const Courses = () => {
             </div>
             
             <div className="flex items-center gap-3 text-gray-700">
-              <Users className="w-6 h-6 text-blue-600" />
+              <Users className="w-6 h-6 text-beauty-dark" />
               <div>
                 <p className="text-sm text-gray-500">Alunos</p>
                 <p className="font-semibold">{course.students}+ formados</p>
@@ -173,7 +168,7 @@ const Courses = () => {
             </div>
             
             <div className="flex items-center gap-3 text-gray-700">
-              <Award className="w-6 h-6 text-blue-600" />
+              <Award className="w-6 h-6 text-beauty-dark" />
               <div>
                 <p className="text-sm text-gray-500">Certificação</p>
                 <p className="font-semibold">Certificado ABT</p>
@@ -191,7 +186,7 @@ const Courses = () => {
               <OptimizedImage
                 src={course.instructorImage}
                 alt={course.instructor}
-                className="w-20 h-20 rounded-full object-cover ring-4 ring-blue-100"
+                className="w-20 h-20 rounded-full object-cover ring-4 ring-beauty-light"
                 skeletonClassName="rounded-full"
               />
               <div>
@@ -207,7 +202,7 @@ const Courses = () => {
             <div className="space-y-3">
               {course.requirements.map((req, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-beauty-dark rounded-full mt-2 flex-shrink-0"></div>
                   <span className="text-gray-700">{req}</span>
                 </div>
               ))}
@@ -216,7 +211,7 @@ const Courses = () => {
         </div>
 
         {/* Final CTA */}
-        <div className="text-center bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-12 shadow-2xl">
+        <div className="text-center bg-gradient-to-br from-beauty-dark to-beauty-medium rounded-3xl p-12 shadow-2xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Uma jornada de conhecimento e conexão
           </h2>
@@ -226,9 +221,9 @@ const Courses = () => {
           <Button
             onClick={handleWhatsAppContact}
             size="lg"
-            className="bg-white hover:bg-gray-100 text-blue-700 font-bold text-lg px-12 py-7 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
+            className="bg-white hover:bg-beauty-cream text-beauty-dark font-bold text-lg px-12 py-7 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
           >
-            <Phone className="w-5 h-5 mr-2" />
+            <MessageCircle className="w-5 h-5 mr-2" />
             Falar no WhatsApp
           </Button>
         </div>
