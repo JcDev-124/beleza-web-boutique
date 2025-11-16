@@ -1,11 +1,17 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Plus, Search, ChevronDown, ChevronUp } from 'lucide-react';
+import { Plus, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useSiteData } from '@/contexts/SiteDataContext';
 import { OptimizedImage } from '@/components/ui/optimized-image';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 export interface Product {
   id: number;
@@ -24,21 +30,20 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
   const { siteData } = useSiteData();
   const { products, productsSectionTitle, productsSectionSubtitle } = siteData;
   
-  const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
   const [searchTerm, setSearchTerm] = useState<string>('');
-  const [showAllProducts, setShowAllProducts] = useState<boolean>(false);
   
-  const categories = ['Todos', 'Terapia Capilar', 'Tratamento Capilar', 'Kits', 'Cuidados Faciais'];
+  const categories = ['Terapia Capilar', 'Tratamento Capilar', 'Kits', 'Cuidados Faciais'];
   
-  const filteredProducts = products.filter(product => {
-    const matchesCategory = selectedCategory === 'Todos' || product.category === selectedCategory;
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  // Limitar produtos exibidos com base no estado showAllProducts
-  const productsToShow = showAllProducts ? filteredProducts : filteredProducts.slice(0, 9);
-  const hasMoreProducts = filteredProducts.length > 9;
+  // Filtrar produtos pela busca
+  const searchFilteredProducts = products.filter(product =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  
+  // Agrupar produtos por categoria
+  const productsByCategory = categories.reduce((acc, category) => {
+    acc[category] = searchFilteredProducts.filter(p => p.category === category);
+    return acc;
+  }, {} as Record<string, Product[]>);
 
   return (
     <section id="products" className="py-20 bg-white">
@@ -51,7 +56,7 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
         </div>
 
         {/* Search Bar */}
-        <div className="max-w-md mx-auto mb-8">
+        <div className="max-w-md mx-auto mb-12">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-beauty-medium w-4 h-4" />
             <Input
@@ -64,102 +69,94 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
           </div>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <Button
-              key={category}
-              variant={selectedCategory === category ? "default" : "outline"}
-              onClick={() => setSelectedCategory(category)}
-              className={`${
-                selectedCategory === category
-                  ? 'bg-beauty-medium hover:bg-beauty-dark text-white'
-                  : 'border-beauty-medium text-beauty-medium hover:bg-beauty-light'
-              }`}
-            >
-              {category}
-            </Button>
-          ))}
-        </div>
+        {/* Products by Category - Horizontal Carousels */}
+        <div className="space-y-16">
+          {categories.map((category) => {
+            const categoryProducts = productsByCategory[category];
+            
+            if (!categoryProducts || categoryProducts.length === 0) {
+              return null;
+            }
 
-        {/* Products Grid - Limited to 3 columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {productsToShow.map((product, index) => (
-            <Card 
-              key={product.id} 
-              className="group hover:shadow-xl transition-all duration-300 border-beauty-light hover:border-beauty-medium overflow-hidden flex flex-col h-full bg-white"
-              style={{
-                animationDelay: `${index * 100}ms`
-              }}
-            >
-              <div className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white p-4">
-                <div className="aspect-[3/4] relative">
-                  <OptimizedImage
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-lg"
-                    skeletonClassName="rounded-lg"
-                  />
-                </div>
-                <div className="absolute top-6 right-6">
-                  <span className="bg-beauty-medium text-white px-2 py-1 rounded-full text-xs font-semibold shadow-sm">
-                    {product.category}
+            return (
+              <div key={category} className="animate-fade-in">
+                {/* Category Title */}
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-2xl font-bold text-beauty-dark">
+                    {category}
+                  </h3>
+                  <span className="text-beauty-medium font-medium">
+                    {categoryProducts.length} {categoryProducts.length === 1 ? 'produto' : 'produtos'}
                   </span>
                 </div>
-              </div>
-              
-              <CardHeader className="flex-grow pb-2">
-                <CardTitle className="text-beauty-dark group-hover:text-beauty-medium transition-colors text-lg font-semibold leading-tight text-center">
-                  {product.name}
-                </CardTitle>
-              </CardHeader>
-              
-              <CardContent className="pb-4">
-                <div className="flex items-center justify-center">
-                  <span className="text-2xl font-bold text-beauty-dark">
-                    R$ {product.price.toFixed(2)}
-                  </span>
-                </div>
-              </CardContent>
-              
-              <CardFooter className="mt-auto pt-0">
-                <Button 
-                  onClick={() => onAddToCart(product)}
-                  className="w-full bg-beauty-medium hover:bg-beauty-dark text-white transition-all duration-200 font-medium"
+
+                {/* Carousel */}
+                <Carousel
+                  opts={{
+                    align: "start",
+                    loop: false,
+                  }}
+                  className="w-full"
                 >
-                  <Plus className="w-4 h-4 mr-2" />
-                  Adicionar ao Carrinho
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
+                  <CarouselContent className="-ml-4">
+                    {categoryProducts.map((product) => (
+                      <CarouselItem key={product.id} className="pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                        <Card className="group hover:shadow-xl transition-all duration-300 border-beauty-light hover:border-beauty-medium overflow-hidden flex flex-col h-full bg-white">
+                          <div className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white p-4">
+                            <div className="aspect-[3/4] relative">
+                              <OptimizedImage
+                                src={product.image}
+                                alt={product.name}
+                                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                                skeletonClassName="rounded-lg"
+                              />
+                            </div>
+                            <div className="absolute top-6 right-6">
+                              <span className="bg-beauty-medium text-white px-2 py-1 rounded-full text-xs font-semibold shadow-sm">
+                                {product.category}
+                              </span>
+                            </div>
+                          </div>
+                          
+                          <CardHeader className="flex-grow pb-2">
+                            <CardTitle className="text-beauty-dark group-hover:text-beauty-medium transition-colors text-lg font-semibold leading-tight text-center">
+                              {product.name}
+                            </CardTitle>
+                          </CardHeader>
+                          
+                          <CardContent className="pb-4">
+                            <div className="flex items-center justify-center">
+                              <span className="text-2xl font-bold text-beauty-dark">
+                                R$ {product.price.toFixed(2)}
+                              </span>
+                            </div>
+                          </CardContent>
+                          
+                          <CardFooter className="mt-auto pt-0">
+                            <Button 
+                              onClick={() => onAddToCart(product)}
+                              className="w-full bg-beauty-medium hover:bg-beauty-dark text-white transition-all duration-200 font-medium"
+                            >
+                              <Plus className="w-4 h-4 mr-2" />
+                              Adicionar ao Carrinho
+                            </Button>
+                          </CardFooter>
+                        </Card>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  
+                  {/* Navigation Arrows */}
+                  <CarouselPrevious className="hidden md:flex -left-12 bg-beauty-medium hover:bg-beauty-dark text-white border-0" />
+                  <CarouselNext className="hidden md:flex -right-12 bg-beauty-medium hover:bg-beauty-dark text-white border-0" />
+                </Carousel>
+              </div>
+            );
+          })}
         </div>
-
-        {/* Ver Mais / Ver Menos Button */}
-        {hasMoreProducts && (
-          <div className="text-center mt-12">
-            <Button
-              onClick={() => setShowAllProducts(!showAllProducts)}
-              variant="outline"
-              className="border-beauty-medium text-beauty-medium hover:bg-beauty-light px-8 py-3"
-            >
-              {showAllProducts ? (
-                <>
-                  <ChevronUp className="w-4 h-4 mr-2" />
-                  Ver Menos
-                </>
-              ) : (
-                <>
-                  <ChevronDown className="w-4 h-4 mr-2" />
-                  Ver Mais ({filteredProducts.length - 9} produtos)
-                </>
-              )}
-            </Button>
-          </div>
-        )}
 
         {/* No products found message */}
-        {filteredProducts.length === 0 && (
+        {searchFilteredProducts.length === 0 && (
           <div className="text-center py-12">
             <p className="text-beauty-medium text-lg">
               Nenhum produto encontrado com os filtros aplicados.
