@@ -1,6 +1,6 @@
 
 import { useEffect } from 'react';
-import { CheckCircle2, Clock, Users, Star, Award, Phone, MapPin, Flame, MessageCircle } from 'lucide-react';
+import { CheckCircle2, Clock, Users, Star, Award, MessageCircle, GraduationCap, Trophy, BookOpen, Target, Sparkles, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Navbar from '@/components/Navbar';
@@ -23,211 +23,459 @@ const Courses = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-beauty-light/30">
+    <div className="min-h-screen bg-white">
       <Navbar cartItemsCount={0} onCartClick={() => {}} />
       
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-gradient-to-br from-beauty-dark via-beauty-medium to-beauty-dark">
+      {/* 1. Hero Section */}
+      <section className="relative pt-32 pb-24 px-4 overflow-hidden bg-gradient-to-br from-beauty-dark via-beauty-medium to-beauty-dark">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00em0wLTEwYzAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0IDEuNzkgNCA0IDQgNC0xLjc5IDQtNHoiLz48L2c+PC9nPjwvc3ZnPg==')]"></div>
         </div>
         
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-white/30">
-            Em 2026 a {course.level}
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-            {course.title.split(' ').map((word, index) => (
-              <span key={index}>
-                {word === 'ITSe' || word === 'Terapia' || word === 'Capilar' ? (
-                  <span className="text-beauty-cream">{word} </span>
-                ) : (
-                  word + ' '
-                )}
-              </span>
-            ))}
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Mais de 3.000 Alunos Formados pela ABT no Brasil e na Europa! 🎓
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-            {course.fullDescription}
+          <h2 className="text-2xl md:text-4xl font-bold text-beauty-cream mb-8">
+            O Maior Passo para Sua Carreira no Universo da Terapia Capilar Começa Aqui!
+          </h2>
+          
+          <p className="text-lg md:text-xl text-white/90 mb-10 max-w-4xl mx-auto leading-relaxed">
+            Já transformamos a jornada de mais de 3.000 cabeleireiros(as), esteticistas, biomédicos, farmacêuticos e outros profissionais que hoje atuam com excelência no mercado da Tricologia. Agora, é a sua vez de se destacar nessa área em constante crescimento e conquistar seu espaço!
           </p>
           
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center">
             <Button
               onClick={handleWhatsAppContact}
               size="lg"
               className="bg-beauty-cream hover:bg-white text-beauty-dark font-bold text-lg px-12 py-7 rounded-full shadow-2xl hover:scale-105 transition-all duration-300"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
-              Garanta AGORA a sua vaga!
+              Quero Me Inscrever na Formação Básica Agora →
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-4 py-16">
-        {/* Course Image */}
-        <div className="mb-16">
-          <OptimizedImage
-            src={course.image}
-            alt={course.title}
-            className="w-full max-w-2xl mx-auto h-auto object-contain rounded-3xl shadow-2xl"
-            skeletonClassName="rounded-3xl"
-            priority={true}
-          />
-        </div>
+      {/* Course Image */}
+      <section className="max-w-6xl mx-auto px-4 -mt-16 mb-16 relative z-20">
+        <OptimizedImage
+          src={course.image}
+          alt={course.title}
+          className="w-full max-w-3xl mx-auto h-auto object-contain rounded-3xl shadow-2xl"
+          skeletonClassName="rounded-3xl"
+          priority={true}
+        />
+      </section>
 
-        {/* Intro Text */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <p className="text-xl text-gray-700 leading-relaxed">
-            Este é o melhor momento para garantir a sua vaga no {course.title}. 
-            Aproveite as condições especiais e faça sua inscrição!
-          </p>
-        </div>
+      {/* 2. Dados de Autoridade e Credibilidade */}
+      <section className="bg-gradient-to-b from-beauty-light/30 to-white py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-beauty-dark mb-4">
+              Por Que Escolher a ABT para Iniciar Sua Jornada na Terapia Capilar?
+            </h2>
+          </div>
 
-        {/* Pricing Card */}
-        <Card className="max-w-lg mx-auto bg-white border-2 border-beauty-light shadow-xl rounded-3xl overflow-hidden mb-16">
-          <div className="p-8 space-y-6">
-            <div className="text-center border-b border-gray-200 pb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">1º LOTE</h3>
-              <div className="flex items-baseline justify-center gap-2">
-                <span className="text-xl text-gray-600">10x</span>
-                <span className="text-beauty-dark font-bold text-6xl">{course.price.replace('R$ ', '').split(',')[0]}</span>
-                <span className="text-3xl font-bold text-beauty-dark italic">{course.price.includes(',') ? ',00' : ''}</span>
-                <span className="text-xl text-gray-600 italic">sem juros!</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <Card className="p-6 text-center hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="w-16 h-16 bg-beauty-light rounded-full flex items-center justify-center mx-auto mb-4">
+                <GraduationCap className="w-8 h-8 text-beauty-dark" />
+              </div>
+              <h3 className="font-bold text-xl text-beauty-dark mb-2">3.000+ Alunos Formados</h3>
+              <p className="text-gray-600">Em todo o Brasil e na Europa</p>
+            </Card>
+
+            <Card className="p-6 text-center hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="w-16 h-16 bg-beauty-light rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-beauty-dark" />
+              </div>
+              <h3 className="font-bold text-xl text-beauty-dark mb-2">Certificação Reconhecida</h3>
+              <p className="text-gray-600">Validada pelo mercado da beleza</p>
+            </Card>
+
+            <Card className="p-6 text-center hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="w-16 h-16 bg-beauty-light rounded-full flex items-center justify-center mx-auto mb-4">
+                <Trophy className="w-8 h-8 text-beauty-dark" />
+              </div>
+              <h3 className="font-bold text-xl text-beauty-dark mb-2">Especialistas Experientes</h3>
+              <p className="text-gray-600">Anos de experiência na área</p>
+            </Card>
+
+            <Card className="p-6 text-center hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="w-16 h-16 bg-beauty-light rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-beauty-dark fill-beauty-dark" />
+              </div>
+              <h3 className="font-bold text-xl text-beauty-dark mb-2">Referência em Tricologia</h3>
+              <p className="text-gray-600">Conteúdo atualizado e consistente</p>
+            </Card>
+
+            <Card className="p-6 text-center hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="w-16 h-16 bg-beauty-light rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="w-8 h-8 text-beauty-dark" />
+              </div>
+              <h3 className="font-bold text-xl text-beauty-dark mb-2">Aplicação Prática</h3>
+              <p className="text-gray-600">Ferramentas para usar desde o primeiro dia</p>
+            </Card>
+
+            <Card className="p-6 text-center hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="w-16 h-16 bg-beauty-light rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-beauty-dark" />
+              </div>
+              <h3 className="font-bold text-xl text-beauty-dark mb-2">Apoio Profissional</h3>
+              <p className="text-gray-600">Suporte completo na sua jornada</p>
+            </Card>
+          </div>
+
+          <div className="bg-gradient-to-r from-beauty-medium to-beauty-dark p-8 rounded-3xl text-center shadow-xl">
+            <p className="text-white text-xl md:text-2xl font-bold">
+              ✨ Reconhecida pela Formação de Profissionais de Terapia Capilar em Nível Nacional e Internacional
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Para Quem é Esse Curso? */}
+      <section className="py-20 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold text-beauty-dark text-center mb-8">
+            Este Curso é para Você Que Deseja Transformar Cabelos e Carreiras!
+          </h2>
+
+          <Card className="p-8 md:p-12 shadow-xl bg-white border-beauty-light">
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              Se você é <span className="font-bold text-beauty-dark">cabeleireiro, esteticista, enfermeiro, biomédico, farmacêutico, fisioterapeuta, nutricionista, químico ou cosmetólogo</span>, este curso foi feito para você que:
+            </p>
+
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-6 h-6 text-beauty-medium mt-1 flex-shrink-0" />
+                <p className="text-gray-700 text-lg">Quer atuar com segurança e competência no segmento de Terapia Capilar.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-6 h-6 text-beauty-medium mt-1 flex-shrink-0" />
+                <p className="text-gray-700 text-lg">Deseja uma formação prática e focada no mercado.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-6 h-6 text-beauty-medium mt-1 flex-shrink-0" />
+                <p className="text-gray-700 text-lg">Almeja se destacar em uma área que cresce exponencialmente.</p>
               </div>
             </div>
 
-            <div className="space-y-4">
-              <div className="bg-beauty-light rounded-xl p-4">
-                <p className="text-beauty-dark font-bold text-xl text-center">
-                  GARANTA A MELHOR OFERTA!
-                </p>
+            <div className="bg-beauty-light p-6 rounded-2xl">
+              <p className="text-beauty-dark text-lg font-semibold">
+                ❓ <span className="font-bold">Ainda não é da área, mas quer começar?</span> Este curso oferece uma introdução perfeita — ideal para iniciantes na Tricologia!
+              </p>
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      {/* 4. Conteúdo Programático */}
+      <section className="bg-gradient-to-b from-beauty-light/30 to-white py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-beauty-dark mb-6">
+              Tudo o que Você Precisa para Iniciar na Terapia Capilar em Apenas 5 Módulos
+            </h2>
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto">
+              Nossa formação foi cuidadosamente projetada para oferecer as bases teóricas e práticas da Terapia Capilar. O conteúdo é dividido em cinco módulos fundamentais que permitirão a você aplicar tratamentos com segurança e confiança.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-beauty-medium text-white rounded-full flex items-center justify-center font-bold text-xl">
+                  1
+                </div>
+                <BookOpen className="w-6 h-6 text-beauty-dark" />
               </div>
-              
-              <div className="text-center">
-                <p className="text-gray-700 text-lg">Total: {course.price}</p>
-                <div className="flex items-center justify-center gap-2 text-red-600 mt-2">
-                  <Flame className="w-5 h-5" />
-                  <span className="font-semibold">Restam poucas vagas!</span>
+              <h3 className="font-bold text-lg text-beauty-dark mb-2">Módulo I</h3>
+              <p className="text-gray-700">Introdução à Morfofisiologia, Sistema Capilar e Biossegurança.</p>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-beauty-medium text-white rounded-full flex items-center justify-center font-bold text-xl">
+                  2
+                </div>
+                <BookOpen className="w-6 h-6 text-beauty-dark" />
+              </div>
+              <h3 className="font-bold text-lg text-beauty-dark mb-2">Módulo II</h3>
+              <p className="text-gray-700">Principais Disfunções Capilares e Introdução à Tricoscopia.</p>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-beauty-medium text-white rounded-full flex items-center justify-center font-bold text-xl">
+                  3
+                </div>
+                <BookOpen className="w-6 h-6 text-beauty-dark" />
+              </div>
+              <h3 className="font-bold text-lg text-beauty-dark mb-2">Módulo III</h3>
+              <p className="text-gray-700">Química e Cosmetologia Aplicada ao Couro Cabeludo e Fios.</p>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-beauty-medium text-white rounded-full flex items-center justify-center font-bold text-xl">
+                  4
+                </div>
+                <BookOpen className="w-6 h-6 text-beauty-dark" />
+              </div>
+              <h3 className="font-bold text-lg text-beauty-dark mb-2">Módulo IV</h3>
+              <p className="text-gray-700">Equipamentos e Recursos Terapêuticos Aplicados.</p>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light md:col-span-2 lg:col-span-1">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-beauty-medium text-white rounded-full flex items-center justify-center font-bold text-xl">
+                  5
+                </div>
+                <BookOpen className="w-6 h-6 text-beauty-dark" />
+              </div>
+              <h3 className="font-bold text-lg text-beauty-dark mb-2">Módulo V</h3>
+              <p className="text-gray-700">Gestão de Negócios Aplicada à Terapia Capilar.</p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Benefícios e Resultados */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-beauty-dark mb-6">
+              Saia do Curso Pronto Para Atuar de Forma Confiante e Profissional!
+            </h2>
+            <p className="text-lg text-gray-700">Ao concluir o curso, você terá:</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-beauty-light rounded-full flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-6 h-6 text-beauty-dark" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg text-beauty-dark mb-2">Compreensão Profunda</h3>
+                  <p className="text-gray-700">Dos sistemas corporais ligados à saúde capilar.</p>
                 </div>
               </div>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-beauty-light rounded-full flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-6 h-6 text-beauty-dark" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg text-beauty-dark mb-2">Identificação de Disfunções</h3>
+                  <p className="text-gray-700">Habilidade de identificar problemas capilares.</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-beauty-light rounded-full flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-6 h-6 text-beauty-dark" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg text-beauty-dark mb-2">Aplicação Segura</h3>
+                  <p className="text-gray-700">Conhecimentos para aplicar tratamentos básicos com segurança e eficácia.</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-beauty-light rounded-full flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-6 h-6 text-beauty-dark" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg text-beauty-dark mb-2">Gestão de Clientes</h3>
+                  <p className="text-gray-700">Ferramentas práticas para gerenciar clientes e iniciar no mercado.</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light md:col-span-2">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-beauty-light rounded-full flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-6 h-6 text-beauty-dark" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg text-beauty-dark mb-2">Certificação ABT</h3>
+                  <p className="text-gray-700">Certificação que valida sua qualificação em uma área com alta demanda no setor da beleza.</p>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          <div className="bg-gradient-to-r from-beauty-medium to-beauty-dark p-8 rounded-3xl text-center shadow-xl">
+            <p className="text-white text-2xl font-bold flex items-center justify-center gap-3">
+              <Target className="w-8 h-8" />
+              Transforme seu conhecimento em resultados reais!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Depoimentos e Prova Social */}
+      <section className="bg-gradient-to-b from-beauty-light/30 to-white py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-beauty-dark mb-4">
+              Histórias Inspiradoras de Alunos Que Transformaram Suas Carreiras!
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map((star) => (
+                  <Star key={star} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                ))}
+              </div>
+              <p className="text-gray-700 mb-4 italic">
+                "Depois do curso, passei a oferecer tratamentos capilares no meu salão e tripliquei minha base de clientes! Super recomendo."
+              </p>
+              <p className="font-semibold text-beauty-dark">Luana M.</p>
+              <p className="text-sm text-gray-500">Aluna ABT - 2023</p>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map((star) => (
+                  <Star key={star} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                ))}
+              </div>
+              <p className="text-gray-700 mb-4 italic">
+                "A formação da ABT mudou completamente minha carreira. Hoje atuo com segurança e tenho resultados incríveis com meus clientes."
+              </p>
+              <p className="font-semibold text-beauty-dark">Carlos R.</p>
+              <p className="text-sm text-gray-500">Aluno ABT - 2022</p>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <div className="flex gap-1 mb-4">
+                {[1,2,3,4,5].map((star) => (
+                  <Star key={star} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                ))}
+              </div>
+              <p className="text-gray-700 mb-4 italic">
+                "Conteúdo excelente, professores qualificados e material didático de primeira. Valeu cada centavo investido!"
+              </p>
+              <p className="font-semibold text-beauty-dark">Fernanda S.</p>
+              <p className="text-sm text-gray-500">Aluna ABT - 2023</p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Formato, Duração e Investimento */}
+      <section className="py-20 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-beauty-dark mb-4">
+              Duração, Formato e Investimento
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <Card className="p-6 text-center hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <Clock className="w-12 h-12 text-beauty-dark mx-auto mb-4" />
+              <h3 className="font-bold text-xl text-beauty-dark mb-2">80 Horas</h3>
+              <p className="text-gray-700">Divididas em 5 módulos completos</p>
+            </Card>
+
+            <Card className="p-6 text-center hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <BookOpen className="w-12 h-12 text-beauty-dark mx-auto mb-4" />
+              <h3 className="font-bold text-xl text-beauty-dark mb-2">Formato Modular</h3>
+              <p className="text-gray-700">Aprenda no seu ritmo</p>
+            </Card>
+
+            <Card className="p-6 text-center hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
+              <Award className="w-12 h-12 text-beauty-dark mx-auto mb-4" />
+              <h3 className="font-bold text-xl text-beauty-dark mb-2">Certificado</h3>
+              <p className="text-gray-700">Reconhecido no mercado</p>
+            </Card>
+          </div>
+
+          <Card className="p-8 md:p-12 shadow-2xl bg-gradient-to-br from-white to-beauty-light/30 border-beauty-medium border-2">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-beauty-dark mb-6">Investimento</h3>
+              
+              <div className="bg-white p-6 rounded-2xl shadow-lg mb-6">
+                <p className="text-gray-600 mb-2">Matrícula</p>
+                <p className="text-4xl font-bold text-beauty-dark">R$ 120,00</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-beauty-dark to-beauty-medium p-8 rounded-2xl shadow-xl text-white">
+                <p className="text-lg mb-2">Curso Completo</p>
+                <p className="text-5xl font-bold mb-4">R$ 3.200,00</p>
+                <p className="text-xl">em até <span className="font-bold">10x no cartão</span></p>
+                <p className="text-sm mt-2 opacity-90">ou boleto (sujeito a análise)</p>
+              </div>
             </div>
 
+            <div className="bg-beauty-cream p-6 rounded-2xl">
+              <h4 className="font-bold text-xl text-beauty-dark mb-4 flex items-center justify-center gap-2">
+                <Sparkles className="w-6 h-6" />
+                Bônus Exclusivo para Inscrições Agora
+              </h4>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-beauty-dark mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">E-book: Guia Prático de Terapia Capilar!</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-beauty-dark mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Certificado reconhecido no mercado</span>
+                </li>
+              </ul>
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      {/* 8. Call to Action Final + Urgência */}
+      <section className="bg-gradient-to-br from-beauty-dark via-beauty-medium to-beauty-dark py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            Garanta Sua Vaga e Transforme Sua Carreira Hoje!
+          </h2>
+          
+          <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
+            As vagas para a próxima turma são <span className="font-bold text-beauty-cream">LIMITADAS</span> para garantir máxima qualidade no ensino. Não perca essa oportunidade — sua carreira na Terapia Capilar pode começar agora mesmo!
+          </p>
+
+          <div className="flex flex-col items-center gap-6 mb-8">
             <Button
               onClick={handleWhatsAppContact}
               size="lg"
-              className="w-full bg-beauty-dark hover:bg-beauty-medium text-white font-bold text-lg py-6 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300"
+              className="bg-beauty-cream hover:bg-white text-beauty-dark font-bold text-xl px-16 py-8 rounded-full shadow-2xl hover:scale-105 transition-all duration-300"
             >
-              COMPRAR AGORA
+              <MessageCircle className="w-6 h-6 mr-3" />
+              Inscreva-se na Formação Básica →
             </Button>
+
+            <div className="flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-full animate-pulse">
+              <Clock className="w-5 h-5" />
+              <span className="font-bold">Promoção válida somente enquanto houver vagas</span>
+            </div>
           </div>
-        </Card>
 
-        {/* Learning Outcomes & Details */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {/* What You'll Learn */}
-          <Card className="lg:col-span-2 p-8 shadow-lg rounded-2xl">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">O que você vai aprender</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {course.whatYouLearn.map((item, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">{item}</span>
-                </div>
-              ))}
-            </div>
-          </Card>
-
-          {/* Course Stats */}
-          <Card className="p-8 shadow-lg rounded-2xl space-y-6">
-            <div className="flex items-center gap-3 text-gray-700">
-              <Clock className="w-6 h-6 text-beauty-dark" />
-              <div>
-                <p className="text-sm text-gray-500">Duração</p>
-                <p className="font-semibold">{course.duration}</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-3 text-gray-700">
-              <Users className="w-6 h-6 text-beauty-dark" />
-              <div>
-                <p className="text-sm text-gray-500">Alunos</p>
-                <p className="font-semibold">{course.students}+ formados</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-3 text-gray-700">
-              <Star className="w-6 h-6 text-yellow-500 fill-yellow-500" />
-              <div>
-                <p className="text-sm text-gray-500">Avaliação</p>
-                <p className="font-semibold">{course.rating} estrelas</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-3 text-gray-700">
-              <Award className="w-6 h-6 text-beauty-dark" />
-              <div>
-                <p className="text-sm text-gray-500">Certificação</p>
-                <p className="font-semibold">Certificado ABT</p>
-              </div>
-            </div>
-          </Card>
+          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+            <p className="text-white text-lg">
+              <span className="font-bold text-beauty-cream">Mais de 3.000 profissionais</span> já transformaram suas carreiras com a ABT. Seja o próximo!
+            </p>
+          </div>
         </div>
-
-        {/* Instructor & Schedule */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {/* Instructor */}
-          <Card className="p-8 shadow-lg rounded-2xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Instrutor</h3>
-            <div className="flex items-center gap-4">
-              <OptimizedImage
-                src={course.instructorImage}
-                alt={course.instructor}
-                className="w-20 h-20 rounded-full object-cover ring-4 ring-beauty-light"
-                skeletonClassName="rounded-full"
-              />
-              <div>
-                <h4 className="font-bold text-xl text-gray-900">{course.instructor}</h4>
-                <p className="text-gray-600">Especialista em Tricologia</p>
-              </div>
-            </div>
-          </Card>
-
-          {/* Requirements */}
-          <Card className="p-8 shadow-lg rounded-2xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Requisitos</h3>
-            <div className="space-y-3">
-              {course.requirements.map((req, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-beauty-dark rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700">{req}</span>
-                </div>
-              ))}
-            </div>
-          </Card>
-        </div>
-
-        {/* Final CTA */}
-        <div className="text-center bg-gradient-to-br from-beauty-dark to-beauty-medium rounded-3xl p-12 shadow-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Uma jornada de conhecimento e conexão
-          </h2>
-          <p className="text-xl text-white/90 mb-8">
-            Não perca a oportunidade de fazer parte deste evento!
-          </p>
-          <Button
-            onClick={handleWhatsAppContact}
-            size="lg"
-            className="bg-white hover:bg-beauty-cream text-beauty-dark font-bold text-lg px-12 py-7 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
-          >
-            <MessageCircle className="w-5 h-5 mr-2" />
-            Falar no WhatsApp
-          </Button>
-        </div>
-      </main>
+      </section>
 
       <Footer />
     </div>
