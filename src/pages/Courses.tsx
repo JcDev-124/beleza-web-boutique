@@ -34,7 +34,7 @@ const Courses = () => {
         
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Mais de 3.000 Alunos Formados pela ABT no Brasil e na Europa! 🎓
+            Mais de 8.000 Alunos Formados pela ABT no Brasil e na Europa! 🎓
           </h1>
           
           <h2 className="text-2xl md:text-4xl font-bold text-beauty-cream mb-8">
@@ -42,7 +42,7 @@ const Courses = () => {
           </h2>
           
           <p className="text-lg md:text-xl text-white/90 mb-10 max-w-4xl mx-auto leading-relaxed">
-            Já transformamos a jornada de mais de 3.000 cabeleireiros(as), esteticistas, biomédicos, farmacêuticos e outros profissionais que hoje atuam com excelência no mercado da Tricologia. Agora, é a sua vez de se destacar nessa área em constante crescimento e conquistar seu espaço!
+            Já transformamos a jornada de mais de 8.000 cabeleireiros(as), esteticistas, biomédicos, farmacêuticos e outros profissionais que hoje atuam com excelência no mercado da Tricologia. Agora, é a sua vez de se destacar nessa área em constante crescimento e conquistar seu espaço!
           </p>
           
           <div className="flex justify-center">
@@ -83,7 +83,7 @@ const Courses = () => {
               <div className="w-16 h-16 bg-beauty-light rounded-full flex items-center justify-center mx-auto mb-4">
                 <GraduationCap className="w-8 h-8 text-beauty-dark" />
               </div>
-              <h3 className="font-bold text-xl text-beauty-dark mb-2">3.000+ Alunos Formados</h3>
+              <h3 className="font-bold text-xl text-beauty-dark mb-2">8.000+ Alunos Formados</h3>
               <p className="text-gray-600">Em todo o Brasil e na Europa</p>
             </Card>
 
@@ -341,10 +341,11 @@ const Courses = () => {
                 ))}
               </div>
               <p className="text-gray-700 mb-4 italic">
-                "Depois do curso, passei a oferecer tratamentos capilares no meu salão e tripliquei minha base de clientes! Super recomendo."
+                "O FBTC curso de Formação em Terapia Capilar elevou o nível dos meus atendimentos, me diferenciando no mercado. Antes ficava limitada a tratar somente o embelezamento dos fios, agora atuo na área da saúde capilar."
               </p>
-              <p className="font-semibold text-beauty-dark">Luana M.</p>
-              <p className="text-sm text-gray-500">Aluna ABT - 2023</p>
+              <p className="font-semibold text-beauty-dark">Keila Silveira</p>
+              <p className="text-sm text-gray-500">Aluna ABT 2022</p>
+              <p className="text-sm text-beauty-medium">@keila.silveira1</p>
             </Card>
 
             <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
@@ -354,10 +355,11 @@ const Courses = () => {
                 ))}
               </div>
               <p className="text-gray-700 mb-4 italic">
-                "A formação da ABT mudou completamente minha carreira. Hoje atuo com segurança e tenho resultados incríveis com meus clientes."
+                "Eu já trabalhava com terapia capilar antes de conhecer a Granliss, mas foi ao entrar em contato com a marca que enxerguei um universo muito maior dentro da área. A Granliss ampliou minha visão e aprofundou meu conhecimento. Após realizar o curso do FB, novas portas se abriram e pude direcionar meu foco 100% para a terapia capilar. Hoje, sou grata a Deus por ter conhecido essa empresa, que tem sido fundamental no meu crescimento e nas oportunidades profissionais que conquistei."
               </p>
-              <p className="font-semibold text-beauty-dark">Carlos R.</p>
-              <p className="text-sm text-gray-500">Aluno ABT - 2022</p>
+              <p className="font-semibold text-beauty-dark">Josiane</p>
+              <p className="text-sm text-gray-500">Aluna ABT 2024</p>
+              <p className="text-sm text-beauty-medium">@jositerapeutacapilar</p>
             </Card>
 
             <Card className="p-6 hover:shadow-xl transition-all duration-300 bg-white border-beauty-light">
@@ -367,10 +369,11 @@ const Courses = () => {
                 ))}
               </div>
               <p className="text-gray-700 mb-4 italic">
-                "Conteúdo excelente, professores qualificados e material didático de primeira. Valeu cada centavo investido!"
+                "Fazer o curso FBTC mudou minha vida, clareou o que procurei durante muitos anos onde os tratamentos não respondiam as necessidades das minhas clientes, e hj sou mais segura nos tratamentos, e os resultados são certeiros....sou muito feliz e grata á ABT."
               </p>
-              <p className="font-semibold text-beauty-dark">Fernanda S.</p>
-              <p className="text-sm text-gray-500">Aluna ABT - 2023</p>
+              <p className="font-semibold text-beauty-dark">Rosana Bueno</p>
+              <p className="text-sm text-gray-500">Aluna ABT 2023</p>
+              <p className="text-sm text-beauty-medium">@rosanaterapeutacapilar</p>
             </Card>
           </div>
         </div>
@@ -424,19 +427,12 @@ const Courses = () => {
 
             <div className="bg-beauty-cream p-6 rounded-2xl">
               <h4 className="font-bold text-xl text-beauty-dark mb-4 flex items-center justify-center gap-2">
-                <Sparkles className="w-6 h-6" />
-                Bônus Exclusivo para Inscrições Agora
+                <Users className="w-6 h-6" />
+                Acompanhamento Profissional Após Formado
               </h4>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-beauty-dark mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">E-book: Guia Prático de Terapia Capilar!</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-beauty-dark mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Certificado reconhecido no mercado</span>
-                </li>
-              </ul>
+              <p className="text-gray-700 text-center">
+                Após concluir sua formação, você terá acesso a suporte e acompanhamento profissional contínuo para garantir seu sucesso no mercado.
+              </p>
             </div>
           </Card>
         </div>
@@ -471,7 +467,7 @@ const Courses = () => {
 
           <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
             <p className="text-white text-lg">
-              <span className="font-bold text-beauty-cream">Mais de 3.000 profissionais</span> já transformaram suas carreiras com a ABT. Seja o próximo!
+              <span className="font-bold text-beauty-cream">Mais de 8.000 profissionais</span> já transformaram suas carreiras com a ABT. Seja o próximo!
             </p>
           </div>
         </div>
