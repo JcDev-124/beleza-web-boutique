@@ -20,6 +20,24 @@ const Index = () => {
   const { toast } = useToast();
 
   const addToCart = (product: Product) => {
+    // DataLayer event for GTM
+    if (typeof window !== 'undefined' && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: 'add_to_cart',
+        ecommerce: {
+          currency: 'BRL',
+          value: product.price,
+          items: [{
+            item_id: product.id,
+            item_name: product.name,
+            item_category: product.category,
+            price: product.price,
+            quantity: 1
+          }]
+        }
+      });
+    }
+
     setCartItems(prevItems => {
       const existingItem = prevItems.find(item => item.id === product.id);
       
