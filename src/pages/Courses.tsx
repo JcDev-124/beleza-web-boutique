@@ -17,6 +17,16 @@ const Courses = () => {
   }, []);
 
   const handleWhatsAppContact = () => {
+    // DataLayer event for GTM - WhatsApp Contact (Courses)
+    if (typeof window !== 'undefined' && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: 'whatsapp_click',
+        event_category: 'lead',
+        event_label: 'Contato Curso',
+        course_name: course.title
+      });
+    }
+
     const message = `Olá! Gostaria de mais informações sobre o curso "${course.title}". Pode me ajudar?`;
     const whatsappUrl = `https://wa.me/${course.whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

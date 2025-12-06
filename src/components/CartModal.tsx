@@ -24,6 +24,26 @@ const CartModal = ({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem 
   const handleCheckout = () => {
     if (cartItems.length === 0) return;
 
+    // DataLayer event for GTM - WhatsApp Checkout
+    if (typeof window !== 'undefined' && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: 'whatsapp_click',
+        event_category: 'checkout',
+        event_label: 'Finalizar pelo WhatsApp',
+        ecommerce: {
+          currency: 'BRL',
+          value: total,
+          items: cartItems.map(item => ({
+            item_id: item.id,
+            item_name: item.name,
+            item_category: item.category,
+            price: item.price,
+            quantity: item.quantity
+          }))
+        }
+      });
+    }
+
     // Create WhatsApp message
     let message = "Olá! Gostaria de finalizar meu pedido:\n\n";
     
